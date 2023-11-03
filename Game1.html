@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verb Infinitive Game</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Translate the verb</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <header>
+        <h1>Your Language Learning Game</h1>
+    </header>
+    
+    <main>
+        <button id="start-game">Start Game</button>
+        <p id="timer">Timer: <span id="time-remaining">0</span></p>
+        <p id="word">Word: <span id="word-text">...</span></p>
+        <input type="text" id="translation" placeholder="Enter translation">
+        <button id="check-translation">Check</button>
+        <p id="count">Word Count: <span id="word-count">0</span></p>
+        <p id="score">Score: <span id="correct-count">0</span></p>
+        <button id="end-game">End Game</button>
+    </main>
     
     <footer>
-        <p>&copy; 2023 Your Language Learning Website</p>
+        <p>&copy; 2023 Your Language Learning Game</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
