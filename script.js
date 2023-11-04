@@ -4,7 +4,6 @@ import { startTimer, stopTimer } from './utils.js';
 
 // Get references to DOM elements
 const startButton = document.getElementById('start-game');
-const endButton = document.getElementById('end-game');
 const timerDisplay = document.getElementById('time-remaining');
 const wordDisplay = document.getElementById('word-text');
 const translationInput = document.getElementById('translation');
@@ -25,9 +24,7 @@ fetch('verbs.json')
     console.error('Error loading JSON data:', error);
   });
 
-// Add event listeners
 startButton.addEventListener('click', () => {
-    // Start the game
     // Get a random word pair from the wordPairs array
   const randomIndex = Math.floor(Math.random() * wordPairs.length);
   const randomWordPair = wordPairs[randomIndex];
@@ -37,12 +34,6 @@ startButton.addEventListener('click', () => {
   wordTextSpan.textContent = randomWordPair.portuguese;
     startTimer();
     // Add other game start logic here
-});
-
-endButton.addEventListener('click', () => {
-    // End the game
-    stopTimer();
-    // Add other game end logic here
 });
 
 checkButton.addEventListener('click', function () {
@@ -77,7 +68,7 @@ checkButton.addEventListener('click', function () {
       // Clear the input field
       translationInput.value = '';
     
-      // Check if the timer has ended before updating the word display
+      // add new word
       updateWordDisplay(wordPairs, wordDisplay);
     
       // Clear the input field
