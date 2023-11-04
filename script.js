@@ -12,9 +12,29 @@ const checkButton = document.getElementById('check-translation');
 const wordCountDisplay = document.getElementById('word-count');
 const scoreDisplay = document.getElementById('correct-count');
 
+// Define a variable to hold the word pairs
+let wordPairs = [];
+
+// Load and parse the JSON data
+fetch('verbs.json')
+  .then(response => response.json())
+  .then(data => {
+    wordPairs = data;
+  })
+  .catch(error => {
+    console.error('Error loading JSON data:', error);
+  });
+
 // Add event listeners
 startButton.addEventListener('click', () => {
     // Start the game
+    // Get a random word pair from the wordPairs array
+  const randomIndex = Math.floor(Math.random() * wordPairs.length);
+  const randomWordPair = wordPairs[randomIndex];
+
+  // Display the Portuguese word in the "word-text" span
+  const wordTextSpan = wordDisplay;
+  wordTextSpan.textContent = randomWordPair.portuguese;
     startTimer();
     // Add other game start logic here
 });
