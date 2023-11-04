@@ -20,8 +20,6 @@ export function startTimer(callback) {
             if (typeof callback === 'function') {
                 callback();
             }
-            // Disable the "Check" button when the timer ends
-            checkButton.setAttribute('disabled', true);
         }
     }, 1000); // Update the timer every second (1000 milliseconds)
 }

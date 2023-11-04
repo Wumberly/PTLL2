@@ -35,9 +35,7 @@ startButton.addEventListener('click', () => {
   // Display the Portuguese word in the "word-text" span
   const wordTextSpan = wordDisplay;
   wordTextSpan.textContent = randomWordPair.portuguese;
-    startTimer();
-  checkButton.removeAttribute('disabled');
-    
+    startTimer();   
 });
 
 endButton.addEventListener('click', () => {
@@ -76,7 +74,7 @@ checkButton.addEventListener('click', function () {
       wordCountDisplay.textContent = wordCount + 1;
 
       // Check if the timer has ended before updating the word display
-      updateWordDisplay(wordPairs, wordDisplay, timeRemaining > 0);
+      updateWordDisplay(wordPairs, wordDisplay);
     
       // Clear the input field
       translationInput.value = '';
