@@ -26,8 +26,8 @@ fetch('verbs.json')
 
 startButton.addEventListener('click', () => {
   // Reset the word count and score to zero
-  wordCountDisplay.textContent = '0';
-  scoreDisplay.textContent = '0';
+  wordCountDisplay.value = 0;
+  scoreDisplay.value = 0;
 
   // Get a random word pair from the wordPairs array
   const randomIndex = Math.floor(Math.random() * wordPairs.length);
