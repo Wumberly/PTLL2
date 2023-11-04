@@ -1,5 +1,5 @@
 // Import the game logic and utility functions
-import { startGame, endGame, updateWord, updateScore, updateTime, checkTranslation } from './game.js';
+//import { startGame, endGame, updateWord, updateScore, updateTime, checkTranslation } from './game.js';
 import { startTimer, stopTimer } from './utils.js';
 
 // Get references to DOM elements
