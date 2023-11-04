@@ -1,5 +1,5 @@
 let timerInterval;
-let timeRemaining = 0; // Set the initial time in seconds (e.g., 60 seconds)
+let timeRemaining = 0;
 
 // Start the game timer
 export function startTimer() {
@@ -9,18 +9,19 @@ export function startTimer() {
     timeRemaining = 30; // Set the desired time in seconds
     updateTimeDisplay(timeRemaining); // Update the timer display initially
 
-    // Start the timer interval
-    timerInterval = setInterval(() => {
-        if (timeRemaining > 0) {
-            timeRemaining--;
-            updateTimeDisplay(timeRemaining);
-        } else {
-            // Time is up - handle game over or other actions
-            clearInterval(timerInterval);
-            alert("Time's up!");
-            // You can add code here to handle what happens when time is up
-        }
-    }, 1000); // Update the timer every second (1000 milliseconds)
+  // Start the timer interval
+  timerInterval = setInterval(() => {
+    if (timeRemaining > 0) {
+      timeRemaining--;
+      updateTimeDisplay(timeRemaining);
+    } else {
+      // Time is up - handle game over or other actions
+      clearInterval(timerInterval);
+      if (typeof callback === 'function') {
+        callback();
+      }
+    }
+  }, 1000); // Update the timer every second (1000 milliseconds)
 }
 
 // Stop the game timer

@@ -74,8 +74,10 @@ checkButton.addEventListener('click', function () {
     // Increase the word count regardless of the result
     wordCountDisplay.textContent = wordCount + 1;
   
-        // Update the word display with a new random word pair
-    updateWordDisplay(wordPairs, wordDisplay);
+    // Check if the timer has ended before updating the word display
+    if (timeRemaining > 0) {
+        updateWordDisplay(wordPairs, wordDisplay);
+    }
   
     // Clear the input field
     translationInput.value = '';
