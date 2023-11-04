@@ -67,20 +67,23 @@ checkButton.addEventListener('click', function () {
     );
   
     if (currentWordPair) {
-      // Correct translation
-      scoreDisplay.textContent = score + 1;
-    }
-  
-    // Increase the word count regardless of the result
-    wordCountDisplay.textContent = wordCount + 1;
-  
-    // Check if the timer has ended before updating the word display
-    if (timeRemaining > 0) {
-        updateWordDisplay(wordPairs, wordDisplay);
-    }
-  
-    // Clear the input field
-    translationInput.value = '';
-  });
+        // Correct translation
+        scoreDisplay.textContent = score + 1;
+      }
+    
+      // Increase the word count regardless of the result
+      wordCountDisplay.textContent = wordCount + 1;
 
-// You can add more event listeners for other game interactions
+      // Clear the input field
+      translationInput.value = '';
+    
+      // Check if the timer has ended before updating the word display
+      if (timeRemaining > 0) {
+        updateWordDisplay(wordPairs, wordDisplay);
+      }
+    
+      // Clear the input field
+      translationInput.value = '';
+    });
+
+
