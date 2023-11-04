@@ -10,11 +10,11 @@ const translationInput = document.getElementById('translation');
 const checkButton = document.getElementById('check-translation');
 const wordCountDisplay = document.getElementById('word-count');
 const scoreDisplay = document.getElementById('correct-count');
+const score = 0
+const wordCount = 0
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
-wordCountDisplay.textContent = '0';
-scoreDisplay.textContent = '0';
 
 // Load and parse the JSON data
 fetch('verbs.json')
@@ -27,9 +27,9 @@ fetch('verbs.json')
   });
 
 startButton.addEventListener('click', () => {
-  // Reset the word count and score to zero
-  wordCountDisplay.textContent = '0';
-  scoreDisplay.textContent = '0';
+  const score = 0
+  const wordCount = 0
+  
 
   // Get a random word pair from the wordPairs array
   const randomIndex = Math.floor(Math.random() * wordPairs.length);
