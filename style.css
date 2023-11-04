@@ -20,6 +20,28 @@ footer {
     padding: 10px;
 }
 
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
 .play-button {
     display: inline-block;
     padding: 10px 20px;
