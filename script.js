@@ -36,8 +36,8 @@ startButton.addEventListener('click', () => {
     startTimer();
 
   // reset word count and score
-  wordCountDisplay.textContent = 0;
-  scoreDisplay.textContent = 0;
+  wordCountDisplay.textContent = "0";
+  scoreDisplay.textContent = "0";
 });
 
 checkButton.addEventListener('click', function () {
