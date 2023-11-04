@@ -75,7 +75,7 @@ checkButton.addEventListener('click', function () {
       wordCountDisplay.textContent = wordCount + 1;
 
       // Check if the timer has ended before updating the word display
-      updateWordDisplay(wordPairs, wordDisplay);
+      updateWordDisplay(wordPairs, wordDisplay, timeRemaining > 0);
     
       // Clear the input field
       translationInput.value = '';
