@@ -24,11 +24,6 @@ export function startTimer() {
   }, 1000); // Update the timer every second (1000 milliseconds)
 }
 
-// Stop the game timer
-export function stopTimer() {
-    clearInterval(timerInterval);
-}
-
 function updateTimeDisplay(time) {
     const timerDisplay = document.getElementById('time-remaining');
     timerDisplay.textContent = `Timer: ${time} seconds`;

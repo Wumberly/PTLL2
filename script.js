@@ -1,6 +1,6 @@
 // Import the game logic and utility functions
 import { updateWordDisplay } from './game.js';
-import { startTimer, stopTimer } from './utils.js';
+import { startTimer } from './utils.js';
 
 // Get references to DOM elements
 const startButton = document.getElementById('start-game');
@@ -25,7 +25,11 @@ fetch('verbs.json')
   });
 
 startButton.addEventListener('click', () => {
-    // Get a random word pair from the wordPairs array
+  // Reset the word count and score to zero
+  wordCountDisplay.textContent = '0';
+  scoreDisplay.textContent = '0';
+
+  // Get a random word pair from the wordPairs array
   const randomIndex = Math.floor(Math.random() * wordPairs.length);
   const randomWordPair = wordPairs[randomIndex];
 
@@ -33,7 +37,6 @@ startButton.addEventListener('click', () => {
   const wordTextSpan = wordDisplay;
   wordTextSpan.textContent = randomWordPair.portuguese;
     startTimer();
-    // Add other game start logic here
 });
 
 checkButton.addEventListener('click', function () {
@@ -61,7 +64,6 @@ checkButton.addEventListener('click', function () {
         // Correct translation
         scoreDisplay.textContent = score + 1;
       }
-    
       // Increase the word count regardless of the result
       wordCountDisplay.textContent = wordCount + 1;
 
