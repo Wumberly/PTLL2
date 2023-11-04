@@ -1,5 +1,5 @@
 // Import the game logic and utility functions
-//import { startGame, endGame, updateWord, updateScore, updateTime, checkTranslation } from './game.js';
+import { updateWordDisplay } from './game.js';
 import { startTimer, stopTimer } from './utils.js';
 
 // Get references to DOM elements
@@ -74,7 +74,8 @@ checkButton.addEventListener('click', function () {
     // Increase the word count regardless of the result
     wordCountDisplay.textContent = wordCount + 1;
   
-    // You can add more game logic or update the displayed word here
+        // Update the word display with a new random word pair
+    updateWordDisplay(wordPairs, wordDisplay);
   
     // Clear the input field
     translationInput.value = '';

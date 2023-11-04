@@ -6,7 +6,7 @@ export function startTimer() {
     // Clear any previous intervals to avoid multiple timers running simultaneously
     clearInterval(timerInterval);
 
-    timeRemaining = 60; // Set the desired time in seconds
+    timeRemaining = 30; // Set the desired time in seconds
     updateTimeDisplay(timeRemaining); // Update the timer display initially
 
     // Start the timer interval
