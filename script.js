@@ -36,7 +36,8 @@ startButton.addEventListener('click', () => {
   const wordTextSpan = wordDisplay;
   wordTextSpan.textContent = randomWordPair.portuguese;
     startTimer();
-    // Add other game start logic here
+  checkButton.removeAttribute('disabled');
+    
 });
 
 endButton.addEventListener('click', () => {
