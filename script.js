@@ -45,9 +45,39 @@ endButton.addEventListener('click', () => {
     // Add other game end logic here
 });
 
-checkButton.addEventListener('click', () => {
-    // Check the user's translation
-    checkTranslation();
-});
+checkButton.addEventListener('click', function () {
+    // Get the user's input from the text box
+    const userTranslation = translationInput.value.trim().toLowerCase();
+  
+    // Get the Portuguese word displayed
+    const portugueseWord = wordDisplay.textContent.toLowerCase();
+  
+    // Get the current score and word count
+    const score = parseInt(scoreDisplay.textContent);
+    const wordCount = parseInt(wordCountDisplay.textContent);
+  
+    // Check if the user's translation matches any of the possible English translations
+    const currentWordPair = wordPairs.find(wordPair =>
+      wordPair.portuguese.toLowerCase() === portugueseWord && (
+        wordPair.english.split(',').some(translation =>
+          translation.trim().toLowerCase() === userTranslation ||
+          translation.trim().toLowerCase() === `to ${userTranslation}`
+        )
+      )
+    );
+  
+    if (currentWordPair) {
+      // Correct translation
+      scoreDisplay.textContent = score + 1;
+    }
+  
+    // Increase the word count regardless of the result
+    wordCountDisplay.textContent = wordCount + 1;
+  
+    // You can add more game logic or update the displayed word here
+  
+    // Clear the input field
+    translationInput.value = '';
+  });
 
 // You can add more event listeners for other game interactions
