@@ -35,7 +35,8 @@ startButton.addEventListener('click', () => {
   // Display the Portuguese word in the "word-text" span
   const wordTextSpan = wordDisplay;
   wordTextSpan.textContent = randomWordPair.portuguese;
-    startTimer();   
+    startTimer();
+    // Add other game start logic here
 });
 
 endButton.addEventListener('click', () => {
@@ -73,6 +74,9 @@ checkButton.addEventListener('click', function () {
       // Increase the word count regardless of the result
       wordCountDisplay.textContent = wordCount + 1;
 
+      // Clear the input field
+      translationInput.value = '';
+    
       // Check if the timer has ended before updating the word display
       updateWordDisplay(wordPairs, wordDisplay);
     
