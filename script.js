@@ -14,7 +14,7 @@ const correctTranslationText = document.getElementById('correct-translation-text
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
-let const correctTranslation = " "
+const correctTranslation = " "
 
 // Load and parse the JSON data
 fetch('verbs.json')
