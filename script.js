@@ -62,26 +62,22 @@ checkButton.addEventListener('click', function () {
       )
     );
   
+    // Display the correct translation regardless of the result
+    correctTranslationText.textContent = currentWordPair.english;
+  
     if (currentWordPair) {
         // Correct translation
         scoreDisplay.textContent = score + 1;
-        correctTranslationText.textContent = "";
-        correctTranslationText.textContent = currentWordPair.english; 
-    } else {
-        // Show the correct translation
-        correctTranslationText.textContent = "";
-        correctTranslationText.textContent = currentWordPair.english;
     }
-
-      // Increase the word count regardless of the result
-      wordCountDisplay.textContent = wordCount + 1;
-
-      // Clear the input field
-      translationInput.value = '';
-    
-      // add new word
-      updateWordDisplay(wordPairs, wordDisplay);
-
-    });
+  
+    // Increase the word count regardless of the result
+    wordCountDisplay.textContent = wordCount + 1;
+  
+    // Clear the input field
+    translationInput.value = '';
+  
+    // add new word
+    updateWordDisplay(wordPairs, wordDisplay);
+});
 
 
