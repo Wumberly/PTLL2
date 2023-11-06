@@ -73,7 +73,5 @@ checkButton.addEventListener('click', function () {
     
       // add new word
       updateWordDisplay(wordPairs, wordDisplay);
-    
-      // Clear the input field
-      translationInput.value = '';
+
     });
