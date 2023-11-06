@@ -63,7 +63,13 @@ checkButton.addEventListener('click', function () {
     );
   
     if (currentWordPair) {
-        // Display the correct translation
+        // Correct translation
+        scoreDisplay.textContent = score + 1;
+        correctTranslationText.textContent = ""; // Clear the previous correct translation
+    } else {
+        // Incorrect translation
+        wordCountDisplay.textContent = wordCount + 1;
+        // Show the correct translation
         correctTranslationText.textContent = currentWordPair.english; // Assuming you have a property called 'english' in your word pair
     }
 
