@@ -63,7 +63,7 @@ checkButton.addEventListener('click', function () {
     );
   
     // Display the correct translation regardless of the result
-    correctTranslationText.textContent = currentWordPair.english;
+    correctTranslationText.textContent = wordPairs.english;
   
     if (currentWordPair) {
         // Correct translation
