@@ -60,6 +60,9 @@ checkButton.addEventListener('click', function () {
         )
       )
     );
+    console.log(currentWordPair)
+    console.log(wordPairs)
+    console.log(wordPair)
   
     if (currentWordPair) {
         // Correct translation
