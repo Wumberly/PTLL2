@@ -65,18 +65,14 @@ checkButton.addEventListener('click', function () {
     if (currentWordPair) {
         // Correct translation
         scoreDisplay.textContent = score + 1;
-        correctTranslationText.textContent = ""; // Clear the previous correct translation
+        correctTranslationText.textContent = "";
+        correctTranslationText.textContent = currentWordPair.english; 
     } else {
-        // Incorrect translation
-        wordCountDisplay.textContent = wordCount + 1;
         // Show the correct translation
-        correctTranslationText.textContent = currentWordPair.english; // Assuming you have a property called 'english' in your word pair
+        correctTranslationText.textContent = "";
+        correctTranslationText.textContent = currentWordPair.english;
     }
 
-    if (currentWordPair) {
-        // Correct translation
-        scoreDisplay.textContent = score + 1;
-      }
       // Increase the word count regardless of the result
       wordCountDisplay.textContent = wordCount + 1;
 
@@ -85,9 +81,7 @@ checkButton.addEventListener('click', function () {
     
       // add new word
       updateWordDisplay(wordPairs, wordDisplay);
-    
-      // Clear the input field
-      translationInput.value = '';
+
     });
 
 
