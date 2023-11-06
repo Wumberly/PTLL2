@@ -4,6 +4,5 @@ export function updateWordDisplay(wordPairs, wordDisplay) {
     const randomIndex = Math.floor(Math.random() * wordPairs.length);
     const randomWordPair = wordPairs[randomIndex];
     wordDisplay.textContent = randomWordPair.portuguese;
-    const correctTranslation = randomWordPair.english;
   }
 
