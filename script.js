@@ -10,6 +10,7 @@ const translationInput = document.getElementById('translation');
 const checkButton = document.getElementById('check-translation');
 const wordCountDisplay = document.getElementById('word-count');
 const scoreDisplay = document.getElementById('correct-count');
+const correctTranslationText = document.getElementById('correct-translation-text');
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
@@ -61,6 +62,8 @@ checkButton.addEventListener('click', function () {
       )
     );
   
+    correctTranslationText.textContent = currentWordPair.english;
+    
     if (currentWordPair) {
         // Correct translation
         scoreDisplay.textContent = score + 1;
