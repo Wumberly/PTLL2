@@ -10,7 +10,6 @@ const translationInput = document.getElementById('translation');
 const checkButton = document.getElementById('check-translation');
 const wordCountDisplay = document.getElementById('word-count');
 const scoreDisplay = document.getElementById('correct-count');
-const correctTranslationText = document.getElementById('correct-translation-text');
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
@@ -45,33 +44,34 @@ checkButton.addEventListener('click', function () {
     // Get the user's input from the text box
     const userTranslation = translationInput.value.trim().toLowerCase();
   
-    // Check if the user's translation matches any of the possible English translations
-    if (currentWordPair) {
-      if (currentWordPair.english.split(',').some(translation =>
-        translation.trim().toLowerCase() === userTranslation ||
-        translation.trim().toLowerCase() === `to ${userTranslation}`
-      )) {
-        // Correct translation
-        score += 1; // Increase the score
-      }
-      // Display the correct English translation
-      correctTranslationText.textContent = currentWordPair.english;
-    }
+    // Get the Portuguese word displayed
+    const portugueseWord = wordDisplay.textContent.toLowerCase();
   
-    // Increase the word count
+    // Get the current score and word count
+    const score = parseInt(scoreDisplay.textContent);
     const wordCount = parseInt(wordCountDisplay.textContent);
-    wordCountDisplay.textContent = wordCount + 1;
   
-    // Clear the input field
-    translationInput.value = '';
+    // Check if the user's translation matches any of the possible English translations
+    const currentWordPair = wordPairs.find(wordPair =>
+      wordPair.portuguese.toLowerCase() === portugueseWord && (
+        wordPair.english.split(',').some(translation =>
+          translation.trim().toLowerCase() === userTranslation ||
+          translation.trim().toLowerCase() === `to ${userTranslation}`
+        )
+      )
+    );
   
-    // Get a new random word pair
-    const randomIndex = Math.floor(Math.random() * wordPairs.length);
-    currentWordPair = wordPairs[randomIndex]; // Update the current word pair
-  
-    // Display the new Portuguese word
-    wordDisplay.textContent = currentWordPair.portuguese;
-    scoreDisplay.textContent = score; // Update the displayed score
-  });
+    if (currentWordPair) {
+        // Correct translation
+        scoreDisplay.textContent = score + 1;
+      }
+      // Increase the word count regardless of the result
+      wordCountDisplay.textContent = wordCount + 1;
 
+      // Clear the input field
+      translationInput.value = '';
+    
+      // add new word
+      updateWordDisplay(wordPairs, wordDisplay);
+    });
 
