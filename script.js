@@ -14,6 +14,7 @@ const correctTranslationText = document.getElementById('correct-translation-text
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
+let const correctTranslation = " "
 
 // Load and parse the JSON data
 fetch('verbs.json')
@@ -34,6 +35,7 @@ startButton.addEventListener('click', () => {
   // Display the Portuguese word in the "word-text" span
   const wordTextSpan = wordDisplay;
   wordTextSpan.textContent = randomWordPair.portuguese;
+  const correctTranslation = randomWordPair.english;
     startTimer();
 
   // reset word count and score
@@ -61,9 +63,8 @@ checkButton.addEventListener('click', function () {
         )
       )
     );
-  
-    // Display the correct translation regardless of the result
-    correctTranslationText.textContent = randomWordPair.english;
+
+    correctTranslationText.textContent = correctTranslation;
   
     if (currentWordPair) {
         // Correct translation
