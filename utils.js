@@ -18,6 +18,7 @@ export function startTimer() {
       updateTimeDisplay(timeRemaining);
     } else {
       // Time is up - handle game over or other actions
+      console.log("Timer has ended");
       clearInterval(timerInterval);
       if (typeof callback === 'function') {
         callback();
