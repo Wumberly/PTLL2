@@ -43,6 +43,7 @@ startButton.addEventListener('click', () => {
 
 checkButton.addEventListener('click', function () {
     // 1. Check the current time (You may want to add timer logic here)
+    const timeAtClick = timeRemaining;
 
     // 2. Increase the word count by 1
     const wordCount = parseInt(wordCountDisplay.textContent);
@@ -67,6 +68,14 @@ checkButton.addEventListener('click', function () {
     // 6. Clear the translation field
     translationInput.value = '';
 
-    // 7. Generate and display a new word to be translated
-    updateWordDisplay(wordPairs, wordDisplay);
+    if (timeAtClick > 0) {
+        // 7. Generate and display a new word to be translated
+        updateWordDisplay(wordPairs, wordDisplay);
+    } else {
+        // 1. Type "Time's up" in Timer display
+        timerDisplay.textContent = "Time's up";
+
+        // 2. Clear the word display
+        wordDisplay.textContent = '';
+    }
 });
