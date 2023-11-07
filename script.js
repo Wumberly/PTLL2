@@ -40,6 +40,8 @@ startButton.addEventListener('click', () => {
   scoreDisplay.textContent = "0";
 });
 
+console.log(randomWordPair)
+
 checkButton.addEventListener('click', function () {
     // Get the user's input from the text box
     const userTranslation = translationInput.value.trim().toLowerCase();
@@ -60,9 +62,7 @@ checkButton.addEventListener('click', function () {
         )
       )
     );
-    console.log(currentWordPair)
-    console.log(wordPairs)
-    console.log(wordPair)
+    console.log(randomWordPair)
   
     if (currentWordPair) {
         // Correct translation
@@ -76,5 +76,6 @@ checkButton.addEventListener('click', function () {
     
       // add new word
       updateWordDisplay(wordPairs, wordDisplay);
+      console.log(randomWordPair)
 
     });
