@@ -14,7 +14,6 @@ const correctTranslationText = document.getElementById('correct-translation-text
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
-let timeRemaining = 0;
 
 // Load and parse the JSON data
 fetch('verbs.json')
@@ -26,7 +25,7 @@ fetch('verbs.json')
     console.error('Error loading JSON data:', error);
   });
 
-startButton.addEventListener('click', () => {
+  startButton.addEventListener('click', () => {
     // Reset the score and word count to zero
     scoreDisplay.textContent = "0";
     wordCountDisplay.textContent = "0";
@@ -44,8 +43,6 @@ startButton.addEventListener('click', () => {
 
 checkButton.addEventListener('click', function () {
     // 1. Check the current time (You may want to add timer logic here)
-    const timeAtClick = parseInt(timerDisplay.textContent);
-    console.log(timeAtClick)
 
     // 2. Increase the word count by 1
     const wordCount = parseInt(wordCountDisplay.textContent);
@@ -70,14 +67,6 @@ checkButton.addEventListener('click', function () {
     // 6. Clear the translation field
     translationInput.value = '';
 
-    if (timeAtClick > 0) {
-        // 7. Generate and display a new word to be translated
-        updateWordDisplay(wordPairs, wordDisplay);
-    } else {
-        // 1. Type "Time's up" in Timer display
-        timerDisplay.textContent = "Time's up";
-
-        // 2. Clear the word display
-        wordDisplay.textContent = '';
-    }
+    // 7. Generate and display a new word to be translated
+    updateWordDisplay(wordPairs, wordDisplay);
 });

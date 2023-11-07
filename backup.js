@@ -25,20 +25,20 @@ fetch('verbs.json')
     console.error('Error loading JSON data:', error);
   });
 
-startButton.addEventListener('click', () => {
-
-  // Get a random word pair from the wordPairs array
-  const randomIndex = Math.floor(Math.random() * wordPairs.length);
-  const randomWordPair = wordPairs[randomIndex];
-
-  // Display the Portuguese word in the "word-text" span
-  const wordTextSpan = wordDisplay;
-  wordTextSpan.textContent = randomWordPair.portuguese;
+  startButton.addEventListener('click', () => {
+    // Reset the score and word count to zero
+    scoreDisplay.textContent = "0";
+    wordCountDisplay.textContent = "0";
+  
+    // Clear the translation field and correct answer field
+    translationInput.value = '';
+    correctTranslationText.textContent = '';
+  
+    // Generate a new word
+    updateWordDisplay(wordPairs, wordDisplay);
+  
+    // Start the timer
     startTimer();
-
-  // reset word count and score
-  wordCountDisplay.textContent = "0";
-  scoreDisplay.textContent = "0";
 });
 
 checkButton.addEventListener('click', function () {
