@@ -38,7 +38,6 @@ startButton.addEventListener('click', () => {
   // reset word count and score
   wordCountDisplay.textContent = "0";
   scoreDisplay.textContent = "0";
-  console.log(randomWordPair)
 });
 
 checkButton.addEventListener('click', function () {
@@ -61,7 +60,6 @@ checkButton.addEventListener('click', function () {
         )
       )
     );
-    console.log(randomWordPair)
   
     if (currentWordPair) {
         // Correct translation
