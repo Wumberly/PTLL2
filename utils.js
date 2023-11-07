@@ -10,7 +10,6 @@ export function startTimer() {
     updateTimeDisplay(timeRemaining); // Update the timer display initially
 
     const checkButton = document.getElementById('check-translation');
-    checkButton.disabled = false; // Enable the "check" button initially
 
   // Start the timer interval
   timerInterval = setInterval(() => {
