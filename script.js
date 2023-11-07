@@ -73,6 +73,4 @@ checkButton.addEventListener('click', function () {
     
       // add new word
       updateWordDisplay(wordPairs, wordDisplay);
-      console.log(randomWordPair)
-
     });
