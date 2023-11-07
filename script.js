@@ -72,3 +72,14 @@ checkButton.addEventListener('click', function () {
     // 7. Generate and display a new word to be translated
     updateWordDisplay(wordPairs, wordDisplay);
 });
+
+// Add an event listener to the text input
+translationInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        // Prevent the default Enter key behavior (e.g., adding newlines)
+        event.preventDefault();
+
+        // Simulate a click on the "check" button
+        checkButton.click();
+    }
+});
