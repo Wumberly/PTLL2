@@ -44,7 +44,7 @@ startButton.addEventListener('click', () => {
 
 checkButton.addEventListener('click', function () {
     // 1. Check the current time (You may want to add timer logic here)
-    const timeAtClick = timeRemaining;
+    const timeAtClick = parseInt.timerDisplay.textContent;
     console.log(timeAtClick)
 
     // 2. Increase the word count by 1
