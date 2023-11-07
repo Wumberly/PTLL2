@@ -29,6 +29,8 @@ fetch('verbs.json')
     // Reset the score and word count to zero
     scoreDisplay.textContent = "0";
     wordCountDisplay.textContent = "0";
+
+    checkButton.disabled = false; // Enable the "check" button initially
   
     // Clear the translation field and correct answer field
     translationInput.value = '';

@@ -9,6 +9,9 @@ export function startTimer() {
     timeRemaining = 30; // Set the desired time in seconds
     updateTimeDisplay(timeRemaining); // Update the timer display initially
 
+    const checkButton = document.getElementById('check-translation');
+    checkButton.disabled = false; // Enable the "check" button initially
+
   // Start the timer interval
   timerInterval = setInterval(() => {
     if (timeRemaining > 0) {
@@ -19,6 +22,7 @@ export function startTimer() {
       clearInterval(timerInterval);
       if (typeof callback === 'function') {
         callback();
+        checkButton.disabled = true; // Disable the "check" button when the timer ends
       }
     }
   }, 1000); // Update the timer every second (1000 milliseconds)
