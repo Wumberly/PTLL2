@@ -13,7 +13,7 @@ const scoreDisplay = document.getElementById('correct-count');
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
-const randomWordPair = [];
+let randomWordPair = [];
 
 // Load and parse the JSON data
 fetch('verbs.json')
