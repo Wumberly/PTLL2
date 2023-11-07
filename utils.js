@@ -14,20 +14,17 @@ export function startTimer() {
   // Start the timer interval
   timerInterval = setInterval(() => {
     if (timeRemaining > 0) {
-      timeRemaining--;
-      updateTimeDisplay(timeRemaining);
+        timeRemaining--;
+        updateTimeDisplay(timeRemaining);
     } else {
-      // Time is up - handle game over or other actions
-      console.log("Timer has ended");
-      clearInterval(timerInterval);
-      if (typeof callback === 'function') {
-        callback();
+        // Time is up - handle game over or other actions
         console.log("Timer has ended");
-        checkButton.disabled = true; // Disable the "check" button when the timer ends
-        console.log("Check button is disabled");
-      }
+        clearInterval(timerInterval);
+
+        // Disable the "check" button when the timer ends
+        checkButton.disabled = true;
     }
-  }, 1000); // Update the timer every second (1000 milliseconds)
+}, 1000); // Update the timer every second (1000 milliseconds)
 }
 
 function updateTimeDisplay(time) {
