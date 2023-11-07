@@ -10,6 +10,7 @@ const translationInput = document.getElementById('translation');
 const checkButton = document.getElementById('check-translation');
 const wordCountDisplay = document.getElementById('word-count');
 const scoreDisplay = document.getElementById('correct-count');
+const correctTranslationText = document.getElementById('correct-translation-text');
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
@@ -41,36 +42,31 @@ startButton.addEventListener('click', () => {
 });
 
 checkButton.addEventListener('click', function () {
-    // Get the user's input from the text box
-    const userTranslation = translationInput.value.trim().toLowerCase();
-  
-    // Get the Portuguese word displayed
-    const portugueseWord = wordDisplay.textContent.toLowerCase();
-  
-    // Get the current score and word count
-    const score = parseInt(scoreDisplay.textContent);
-    const wordCount = parseInt(wordCountDisplay.textContent);
-  
-    // Check if the user's translation matches any of the possible English translations
-    const currentWordPair = wordPairs.find(wordPair =>
-      wordPair.portuguese.toLowerCase() === portugueseWord && (
-        wordPair.english.split(',').some(translation =>
-          translation.trim().toLowerCase() === userTranslation ||
-          translation.trim().toLowerCase() === `to ${userTranslation}`
-        )
-      )
-    );
-  
-    if (currentWordPair) {
-        // Correct translation
-        scoreDisplay.textContent = score + 1;
-      }
-      // Increase the word count regardless of the result
-      wordCountDisplay.textContent = wordCount + 1;
+    // 1. Check the current time (You may want to add timer logic here)
 
-      // Clear the input field
-      translationInput.value = '';
-    
-      // add new word
-      updateWordDisplay(wordPairs, wordDisplay);
-    });
+    // 2. Increase the word count by 1
+    const wordCount = parseInt(wordCountDisplay.textContent);
+    wordCountDisplay.textContent = wordCount + 1;
+
+    // 3. Display the correct English translation
+    const portugueseWord = wordDisplay.textContent.toLowerCase();
+    const currentWordPair = wordPairs.find(wordPair => wordPair.portuguese.toLowerCase() === portugueseWord);
+    if (currentWordPair) {
+        correctTranslationText.textContent = currentWordPair.english;
+    }
+
+    // 4. Check if the translation provided by the user is correct
+    const userTranslation = translationInput.value.trim().toLowerCase();
+    if (currentWordPair && currentWordPair.english.split(',').some(translation =>
+        translation.trim().toLowerCase() === userTranslation || translation.trim().toLowerCase() === `to ${userTranslation}`)) {
+        // 5. If correct, increase the score by 1
+        const score = parseInt(scoreDisplay.textContent);
+        scoreDisplay.textContent = score + 1;
+    }
+
+    // 6. Clear the translation field
+    translationInput.value = '';
+
+    // 7. Generate and display a new word to be translated
+    updateWordDisplay(wordPairs, wordDisplay);
+});
