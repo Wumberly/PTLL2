@@ -13,6 +13,7 @@ const scoreDisplay = document.getElementById('correct-count');
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
+const randomWordPair = [];
 
 // Load and parse the JSON data
 fetch('verbs.json')
@@ -38,9 +39,8 @@ startButton.addEventListener('click', () => {
   // reset word count and score
   wordCountDisplay.textContent = "0";
   scoreDisplay.textContent = "0";
+  console.log(randomWordPair)
 });
-
-console.log(randomWordPair)
 
 checkButton.addEventListener('click', function () {
     // Get the user's input from the text box
