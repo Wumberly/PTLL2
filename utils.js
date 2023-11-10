@@ -6,7 +6,7 @@ export function startTimer() {
     // Clear any previous intervals to avoid multiple timers running simultaneously
     clearInterval(timerInterval);
 
-    timeRemaining = 15; // Set the desired time in seconds
+    timeRemaining = 30; // Set the desired time in seconds
     updateTimeDisplay(timeRemaining); // Update the timer display initially
 
     const checkButton = document.getElementById('check-translation');
@@ -23,6 +23,9 @@ export function startTimer() {
 
         // Disable the "check" button when the timer ends
         checkButton.disabled = true;
+
+        // Reappear the start button
+        startButton.style.display = 'block';
     }
 }, 1000); // Update the timer every second (1000 milliseconds)
 }

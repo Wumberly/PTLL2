@@ -60,9 +60,9 @@ p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 80%;
-    height: 60%;
+    height: 75%;
     max-width: 800px;
-    max-height: 1000px;
+    max-height: 1800px;
     position: relative;
     display: flex; /* Use flexbox to center the content */
     justify-content: center; /* Center horizontally */

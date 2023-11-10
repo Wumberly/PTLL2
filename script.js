@@ -38,6 +38,9 @@ fetch('verbs.json')
   
     // Generate a new word
     updateWordDisplay(wordPairs, wordDisplay);
+
+    // Hide the start button
+    startButton.style.display = 'none';
   
     // Start the timer
     startTimer();
