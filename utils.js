@@ -25,12 +25,12 @@ export function startTimer() {
         checkButton.disabled = true;
 
         // Reappear the start button
-        startButton.style.display = 'block';
+        startButton.style.display = '';
     }
 }, 1000); // Update the timer every second (1000 milliseconds)
 }
 
 function updateTimeDisplay(time) {
     const timerDisplay = document.getElementById('time-remaining');
-    timerDisplay.textContent = `Timer: ${time} seconds`;
+    timerDisplay.textContent = `: ${time} seconds`;
 }
