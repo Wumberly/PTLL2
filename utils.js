@@ -25,7 +25,7 @@ export function startTimer() {
         checkButton.disabled = true;
 
         // Reappear the start button
-        startButton.style.display = '';
+        startButton.style.display = 'inline-block';
     }
 }, 1000); // Update the timer every second (1000 milliseconds)
 }

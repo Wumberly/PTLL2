@@ -104,7 +104,7 @@ p {
 /* Styling for the head lower left (left hand side) */
 .head-lower-left {
     flex: 1; /* Takes 50% of the head lower width */
-    background-color: #ce2626; /* Example background color */
+    background-color: #fff; /* Example background color */
 }
 
 .rote-learn-heading {
