@@ -1,5 +1,6 @@
 let timerInterval;
 let timeRemaining = 0;
+const startButton = document.getElementById('start-game');
 
 // Start the game timer
 export function startTimer() {
