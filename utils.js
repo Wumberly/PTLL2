@@ -33,5 +33,5 @@ export function startTimer() {
 
 function updateTimeDisplay(time) {
     const timerDisplay = document.getElementById('time-remaining');
-    timerDisplay.textContent = `: ${time} seconds`;
+    timerDisplay.textContent = `${time}`;
 }
