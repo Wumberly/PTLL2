@@ -7,6 +7,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .container {
     background-color: #ffffff;
     display: grid;
@@ -21,19 +22,17 @@ body {
 
 /* Level 2 */
 
-.item {
-    background-color: #ffffff;
-    border: 2px solid #000000;
-    padding: 20px;
-    display: grid;
-}
-
-.item2 {
+.subcontainer{
     background-color: #ccc;
     border: 2px solid #000000;
     padding: 20px;
     display: grid;
 }
+
+.item{
+    background-color: #ffffff; 
+}
+
 
 /* Level 3A */
 
@@ -47,18 +46,12 @@ body {
 
 .nested-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr;
     gap: 10px;
-
-}
-
-.navbar {
-    grid-column: span 3;
 }
 
 .sitename {
-    grid-column: span 2;
     font-size:xx-large; 
     display: flex;
     align-items: left;
@@ -69,19 +62,29 @@ body {
 .nested-container2 {
     background-color: #ccc;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr,4);
     grid-template-rows: 2fr 1fr 2fr;
     gap: 10px;
 }
 
-.gamewindow {
-    grid-column: span 2;
+.gamewindow{
+    grid-column: span 3; 
 }
+
+
 .wordinput {
-    grid-column: span 2;
+    grid-column: span 4;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.verdict {
+    grid-column: span 2;
+}
+
+.scorebox {
+    grid-column: span 2;
 }
 
 /* Elements */
