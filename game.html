@@ -4,66 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
     <link rel="stylesheet" href="style.css">
+    <title>Nested Grid Layout</title>
 
     <script type="module" src="utils.js"></script>
     <script type="module" src="game.js"></script>
     <script type="module" src="script.js"></script>
-    
 </head>
 
-<body>  
-    <main class="game-container">
+<body>
+    <div class="container">
+        <!------------------------------->
+        <div class="item">
 
-        <div class="head-container">
-            
-            <div class="head-upper">
-                <p id="wordie"><span id="wordie-text">Sample</span></p>
-            </div>
-
-            <div class="head-lower">
-
-                <div class="head-lower-left">
+            <div class="nested-container">
+                <div class="navbar">Navbar</div>
+                <div class="sitename">
                     <h1 class="rote-learn-heading">RoteLearn</span></h1>
                 </div>
-
-                <div class="head-lower-right">
+                <div class="timer">
                     <p id="timer">Timer <span id="time-remaining"></span></p>
                 </div>
             </div>
+
         </div>
+        <!------------------------------->
+        <div class="item2">
 
-        <div class="secondary-container">
-
-            <div class="secondary-upper">
-
-                <div class="secondary-upper-upper">
+            <div class="nested-container2">
+                <div class="gamewindow">
                     <button class = "button" id="start-game">Start Game</button>
                     <p id="word"><span id="word-text">Trabalhar</span></p>
                 </div>
-
-                <div class="secondary-upper-lower">
+                <div class="wordinput">
                     <input type="text" id="translation" placeholder="Enter translation">
                     <button class = "button" id="check-translation" disabled>Check</button>
                 </div>
-            </div>
-
-            <div class="secondary-lower">
-
-                <div class="correction-box">
-                    <p id="translated-text">: <span></span></p>
+                <div class="verdict">
+                    <p id="translated-text">Translated Text: <span></span></p>
                     <p id="correct-translation-text">Correct Translation: <span></span></p>
                 </div>
-
-                <div class="scoreboard-box">
+                <div class="scorebox">
                     <p id="count">Word Count: <span id="word-count">0</span></p>
                     <p id="score">Score: <span id="correct-count">0</span></p>
                 </div>
+
             </div>
-
+            <!------------------------------->
         </div>
-
-    </main>
+    </div>
 </body>
 </html>
