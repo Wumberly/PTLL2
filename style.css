@@ -37,6 +37,14 @@ body {
 
 /* Level 3A */
 
+.layer3 {
+    background-color: #ffffff; 
+    border: 1px solid #000000;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+}
+
 .nested-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -46,23 +54,14 @@ body {
 }
 
 .navbar {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
     grid-column: span 3;
 }
 
 .sitename {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
     grid-column: span 2;
-}
-
-.timer {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
+    font-size:xx-large; 
+    display: flex;
+    align-items: left;
 }
 
 /* Level 3B */
@@ -76,29 +75,13 @@ body {
 }
 
 .gamewindow {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
     grid-column: span 2;
 }
-
 .wordinput {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
     grid-column: span 2;
-}
-
-.verdict {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
-}
-
-.scorebox {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Elements */
@@ -106,8 +89,9 @@ body {
 input {
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
+
 }
 
 p {
@@ -128,8 +112,11 @@ p {
 }
 
 #word {
-    font-size: 60px;
-    margin: 10px 0;   
+    font-size: 60px; 
+}
+
+#timer {
+    font-size: 60px;  
 }
 
 
