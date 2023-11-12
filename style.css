@@ -1,3 +1,6 @@
+
+/* Level 1 */
+
 body {
     background-color: #7499AF;
     display: flex;
@@ -11,27 +14,29 @@ body {
     border: 5px,solid #000000;
     height: 800px;
     width: 800px;
-    grid-template-columns: 1fr; /* One column */
-    grid-template-rows: 1fr 2fr; /* Two rows with automatic height */
-    gap: 20px; /* Adjust the gap between grid items */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 20px;
 }
 
-/* Grid items */
+/* Level 2 */
+
 .item {
     background-color: #ffffff;
-    border: 2px solid #000000; /* Add borders for better visualization */
-    padding: 20px; /* Add some padding to the items */
+    border: 2px solid #000000;
+    padding: 20px;
     display: grid;
 }
 
 .item2 {
     background-color: #ccc;
-    border: 2px solid #000000; /* Add borders for better visualization */
-    padding: 20px; /* Add some padding to the items */
+    border: 2px solid #000000;
+    padding: 20px;
     display: grid;
 }
 
-/* Nested grid container styles */
+/* Level 3A */
+
 .nested-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -60,7 +65,8 @@ body {
     padding: 10px;
 }
 
-/* Nested grid container styles */
+/* Level 3B */
+
 .nested-container2 {
     background-color: #ccc;
     display: grid;
@@ -94,6 +100,8 @@ body {
     border: 1px solid #000000;
     padding: 10px;
 }
+
+/* Elements */
 
 input {
     padding: 10px;
