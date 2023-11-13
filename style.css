@@ -8,17 +8,19 @@ body {
     justify-content: center;
 }
 
+ 
 .container {
     background-color: #ffffff;
     display: grid;
     padding: 20px;
-    border: 5px,solid #000000;
+    border: 5px solid #000000;
     height: 800px;
     width: 800px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
     gap: 20px;
 }
+
 
 /* Level 2 */
 
@@ -49,12 +51,6 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr;
     gap: 10px;
-}
-
-.sitename {
-    font-size:xx-large; 
-    display: flex;
-    align-items: left;
 }
 
 /* Level 3B */
@@ -89,17 +85,12 @@ body {
 
 /* Elements */
 
+/*
 input {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #000000;
     border-radius: 5px;
-
-}
-
-p {
-    font-size: 18px;
-    margin: 10px 0;
 }
 
 .button {
@@ -113,14 +104,5 @@ p {
     font-size: 16px;
     cursor: pointer;
 }
-
-#word {
-    font-size: 60px; 
-}
-
-#timer {
-    font-size: 40px;  
-}
-
 
 
