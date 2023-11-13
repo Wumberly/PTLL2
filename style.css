@@ -7,7 +7,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
  
 .container {
     background-color: #ffffff;
@@ -20,7 +19,6 @@ body {
     grid-template-rows: 1fr 4fr;
     gap: 20px;
 }
-
 
 /* Level 2 */
 
@@ -64,7 +62,6 @@ body {
     grid-column: span 3; 
 }
 
-
 .wordinput {
     grid-column: span 4;
     display: flex;
@@ -81,7 +78,6 @@ body {
 }
 
 /* Elements */
-
 
 input {
     padding: 10px;
@@ -102,4 +98,12 @@ input {
     cursor: pointer;
 }
 
+#start-game {
+    position: absolute;
+    z-index: 2;
+}
 
+#word {
+    position: absolute;
+    z-index: 1;
+}
