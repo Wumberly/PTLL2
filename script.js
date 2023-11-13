@@ -12,6 +12,7 @@ const wordCountDisplay = document.getElementById('word-count');
 const scoreDisplay = document.getElementById('correct-count');
 const correctTranslationText = document.getElementById('correct-translation-text');
 const translatedText = document.getElementById('translated-text')
+const result = document.getElementById('result')
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
@@ -68,7 +69,13 @@ checkButton.addEventListener('click', function () {
         // 5. If correct, increase the score by 1
         const score = parseInt(scoreDisplay.textContent);
         scoreDisplay.textContent = score + 1;
-    }
+        result.textContent = "Correct";
+        result.style.color = "green";
+    } else {
+      // Incorrect answer
+      result.textContent = "Incorrect";
+      result.style.color = "red";
+  }
 
     // 6. Clear the translation field
     translationInput.value = '';
