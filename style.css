@@ -39,7 +39,8 @@ body {
 .layer3 {
     background-color: #ffffff; 
     border: 1px solid #000000;
-    padding: 10px;
+    font-size:larger;
+    padding: 5px;
     display: grid;
     place-items: center;
 }
@@ -48,6 +49,23 @@ body {
     display: grid;
     gap: 10px;
 }
+
+/* ----------------------------------------- */
+/* ------------------NAVBAR----------------- */
+
+.navbar {
+    display: flex;
+}
+
+.navbarel {
+    padding: 0;
+    margin: 0;
+    margin-right: 3%;
+}
+
+
+/* ----------------------------------------- */
+/* ----------------------------------------- */
 
 /* Level 3B */
 
@@ -72,10 +90,24 @@ body {
 
 .verdict {
     grid-column: span 2;
+    display: grid;
+    grid-column: 1fr;
+    grid-row: 1fr 1fr 1fr;
 }
 
 .scorebox {
     grid-column: span 2;
+    display: grid;
+    grid-column: 1fr;
+    grid-row: 1fr 1fr 1fr;
+}
+
+.sec2 {
+    background-color: #ccc;
+    grid-row: span 2;
+    border: 1px solid black;
+    width: 95%;
+    height: 95%;
 }
 
 /* Elements */
@@ -85,6 +117,7 @@ input {
     font-size: 16px;
     border: 1px solid #000000;
     border-radius: 5px;
+    width:50%;
 }
 
 .button {
@@ -99,12 +132,19 @@ input {
     cursor: pointer;
 }
 
+.boxel {
+    margin: 0;
+    border: 0;
+    padding: 5px;
+    font-size: xx-large; 
+}
 
 #start-game {
     position: absolute;
     z-index: 2;
     padding: 20px 70px;
     font-size: larger;
+    font-weight: bolder;
 }
 
 #check-translation {
@@ -115,4 +155,26 @@ input {
 #word {
     position: absolute;
     z-index: 1;
+    font-size: xx-large;
 }
+
+#timer {
+    font-size: xx-large;
+    font-weight: bolder;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.sitename {
+    font-size: large; 
+    display: flex;
+    align-items: center;
+    margin: 0; /* Reset margin to ensure left alignment */
+}
+
+#rote-learn-heading {
+    margin: 0;
+}
+
+
