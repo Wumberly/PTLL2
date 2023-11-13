@@ -11,6 +11,7 @@ const checkButton = document.getElementById('check-translation');
 const wordCountDisplay = document.getElementById('word-count');
 const scoreDisplay = document.getElementById('correct-count');
 const correctTranslationText = document.getElementById('correct-translation-text');
+const translatedText = document.getElementById('translated-text')
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
@@ -30,7 +31,8 @@ fetch('verbs.json')
     scoreDisplay.textContent = "0";
     wordCountDisplay.textContent = "0";
 
-    checkButton.disabled = false; // Enable the "check" button initially
+    // Enable the "check" button initially
+    checkButton.disabled = false;
   
     // Clear the translation field and correct answer field
     translationInput.value = '';
@@ -47,9 +49,7 @@ fetch('verbs.json')
 });
 
 checkButton.addEventListener('click', function () {
-    // 1. Check the current time (You may want to add timer logic here)
-
-    // 2. Increase the word count by 1
+    // 1. Increase the word count by 1
     const wordCount = parseInt(wordCountDisplay.textContent);
     wordCountDisplay.textContent = wordCount + 1;
 
@@ -58,6 +58,7 @@ checkButton.addEventListener('click', function () {
     const currentWordPair = wordPairs.find(wordPair => wordPair.portuguese.toLowerCase() === portugueseWord);
     if (currentWordPair) {
         correctTranslationText.textContent = currentWordPair.english;
+        translatedText.textContent = currentWordPair.portuguese;
     }
 
     // 4. Check if the translation provided by the user is correct
