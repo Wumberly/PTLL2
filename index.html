@@ -1,19 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="homepage.css">
+    <title>Nested Grid Layout</title>
+
+    <script type="module" src="utils.js"></script>
+    <script type="module" src="game.js"></script>
+    <script type="module" src="script.js"></script>
 </head>
+
 <body>
-    <header>
-        <h1>RoteLearn</h1>
-    </header>
-    <a href="game.html" class="play-button">Play Game</a>
-    
-    <footer>
-        <p>&copy; RoteLearn</p>
-    </footer>
+    <div class="container">
+        <!------------------------------->
+        <div class="item1 subcontainer">
+
+            <div class="nested-container">
+                <div class="navbar layer3">
+                    <p class="navbarel" id="home"><span id="Home">Home</span></p>
+                    <p class="navbarel" id="tutors"><span id="Tutors">Tutors</span></p>
+                    <p class="navbarel" id="community"><span id="Community">Community</span></p>
+                    <p class="navbarel" id="about"><span id="About">About</span></p>
+                    <p class="navbarel" id="profile"><span id="Profile">Profile</span></p>
+                    <p class="navbarel" id="settings"><span id="Settings">S</span></p> 
+                </div>
+                <div class="sitename layer3">
+                    <h1 class="rote-learn-heading">RoteLearn</span></h1>
+                </div>
+            </div>
+        </div>
+        <!------------------------------->
+
+
+        <!------------------------------->
+        <div class="item2 subcontainer">
+            <div class="game1 gamebox">
+                <p class="subtitle" id="game1"><span id="game1">Vocabulary Trainer</span></p>
+                <a href="game.html" class="button">Play Game</a>
+            </div>
+            <div class="game2 gamebox"></div>
+            <div class="game3 gamebox"></div>
+            <div class="game4 gamebox"></div>
+            <div class="game5 gamebox"></div>
+            <div class="game6 gamebox"></div>
+        </div>
+        <!------------------------------->
+    </div>
 </body>
 </html>

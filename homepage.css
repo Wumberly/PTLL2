@@ -1,0 +1,133 @@
+/* Level 1 */
+
+body {
+    background-color: #7499AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: grid;
+    padding: 20px;
+    border: 5px solid #000000;
+    height: 800px;
+    width: 800px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    gap: 20px;
+}
+
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+
+.subcontainer{
+    background-color: #ccc;
+    border: 2px solid #000000;
+    padding: 20px;
+    display: grid;
+}
+
+.nested-container {
+    display: grid;
+    gap: 10px;
+}
+
+.item1{
+    background-color: #ffffff; 
+}
+
+/* controlling navbar & sitename box */
+.layer3 {
+    background-color: #ffffff; 
+    border: 1px solid #000000;
+    font-size:larger;
+    padding: 5px;
+    display: grid;
+    place-items: center;
+}
+
+/* ----------------------------------------- */
+/* ------------------NAVBAR----------------- */
+
+.navbar {
+    display: flex;
+}
+
+.navbarel {
+    padding: 0;
+    margin: 0;
+    margin-right: 3%;
+}
+
+
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+
+/* ----------------------------------------- */
+/* -----------TITLE SECTION----------------- */
+
+.sitename {
+    background-color: #ffffff; 
+    font-size: large; 
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border: 1px solid #000000;
+    font-size:larger;
+    padding: 5px;
+
+}
+
+#rote-learn-heading {
+    margin: 0;
+}
+
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+
+/* ----------------------------------------- */
+/* -----------Lower Box (Item 2)------------ */
+
+.item2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.gamebox {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    padding: 0px;
+    margin: 5px;
+    display: grid;
+    place-content: center;
+}
+
+/* ----------------------------------------- */
+/* ----------------------------------------- */
+
+
+/* Elements */
+
+input {
+    padding: 20px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    width:50%;
+}
+
+.button {
+    background-color: #37E5F5;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
