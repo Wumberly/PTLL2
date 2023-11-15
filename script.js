@@ -29,11 +29,11 @@ fetch('verbs.json')
 
   startButton.addEventListener('click', () => {
 
-    togglePopup(false)
-
     // Reset the score and word count to zero
     scoreDisplay.textContent = "0";
     wordCountDisplay.textContent = "0";
+
+    togglePopup(false)
 
     // Enable the "check" button initially
     checkButton.disabled = false;

@@ -1,6 +1,8 @@
 let timerInterval;
 let timeRemaining = 0;
 const startButton = document.getElementById('start-game');
+const wordCountDisplay = document.getElementById('word-count');
+const scoreDisplay = document.getElementById('correct-count');
 
 // Start the game timer
 export function startTimer() {
@@ -48,3 +50,34 @@ export function togglePopup(show) {
     // Toggle the display based on the boolean value
     popupContainer.style.display = show ? 'flex' : 'none';
 }
+
+export function togglePopup(show) {
+    // Get the reference to the popup container
+    const popupContainer = document.getElementById('popup-container');
+
+    // Get the reference to the popup content
+    const popupContent = document.getElementById('popup-content');
+
+    score = scoreDisplay.textContent
+    wordCount = wordCountDisplay.textContent
+
+    // If the popup is set to show, update its content
+    if (show) {
+        // Update the content of the popup
+        popupContent.innerHTML = `
+            <p>Game Over!</p>
+            <p>Score: ${score}</p>
+            <p>Words Attempted: ${wordCount}</p>
+            <button onclick="startNewGame()">Start Game</button>
+        `;
+    }
+
+    // Toggle the display based on the boolean value
+    popupContainer.style.display = show ? 'flex' : 'none';
+}
+
+// Function to start a new game
+window.startNewGame = function () {
+    // Trigger the click event on the Start button
+    startButton.click();
+};
