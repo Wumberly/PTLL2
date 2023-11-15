@@ -47,14 +47,6 @@ export function togglePopup(show) {
     // Get the reference to the popup container
     const popupContainer = document.getElementById('popup-container');
 
-    // Toggle the display based on the boolean value
-    popupContainer.style.display = show ? 'flex' : 'none';
-}
-
-export function togglePopup(show) {
-    // Get the reference to the popup container
-    const popupContainer = document.getElementById('popup-container');
-
     // Get the reference to the popup content
     const popupContent = document.getElementById('popup-content');
 
