@@ -16,7 +16,6 @@ const result = document.getElementById('result')
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
-let capturedTranslations = [];
 
 // Load and parse the JSON data
 fetch('verbs.json')

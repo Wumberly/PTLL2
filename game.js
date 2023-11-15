@@ -1,3 +1,4 @@
+let capturedTranslations = [];
 
 // Create a function to update the word display with a new random word pair
 export function updateWordDisplay(wordPairs, wordDisplay) {
