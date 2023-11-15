@@ -1,6 +1,6 @@
 // Import the game logic and utility functions
 import { updateWordDisplay } from './game.js';
-import { startTimer } from './utils.js';
+import { startTimer, togglePopup } from './utils.js';
 
 // Get references to DOM elements
 const startButton = document.getElementById('start-game');
@@ -28,6 +28,9 @@ fetch('verbs.json')
   });
 
   startButton.addEventListener('click', () => {
+
+    togglePopup(false)
+
     // Reset the score and word count to zero
     scoreDisplay.textContent = "0";
     wordCountDisplay.textContent = "0";

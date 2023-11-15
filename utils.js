@@ -25,8 +25,12 @@ export function startTimer() {
         // Disable the "check" button when the timer ends
         checkButton.disabled = true;
 
+        togglePopup(true)
+
         // Reappear the start button
         startButton.style.display = 'inline-block';
+
+        
     }
 }, 1000); // Update the timer every second (1000 milliseconds)
 }
@@ -34,4 +38,13 @@ export function startTimer() {
 function updateTimeDisplay(time) {
     const timerDisplay = document.getElementById('time-remaining');
     timerDisplay.textContent = `${time}`;
+}
+
+
+export function togglePopup(show) {
+    // Get the reference to the popup container
+    const popupContainer = document.getElementById('popup-container');
+
+    // Toggle the display based on the boolean value
+    popupContainer.style.display = show ? 'flex' : 'none';
 }
