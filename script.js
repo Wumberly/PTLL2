@@ -17,6 +17,8 @@ const mainContainer = document.getElementById('main-container');
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
+let gameResults
+let time = 15
 
 // Load and parse the JSON data
 fetch('verbs.json')
@@ -29,6 +31,11 @@ fetch('verbs.json')
   });
 
   startButton.addEventListener('click', () => {
+
+    gameResults = {
+      score: 0,
+      wordCount: 0
+    }
 
     mainContainer.style.display = 'grid'
     // Reset the score and word count to zero
@@ -51,13 +58,14 @@ fetch('verbs.json')
     startButton.style.display = 'none';
   
     // Start the timer
-    startTimer();
+    startTimer(time,()=>{
+      togglePopup(true, gameResults.score, gameResults.wordCount)});
 });
 
 checkButton.addEventListener('click', function () {
     // 1. Increase the word count by 1
-    const wordCount = parseInt(wordCountDisplay.textContent);
-    wordCountDisplay.textContent = wordCount + 1;
+    // const wordCount = parseInt(wordCountDisplay.textContent);
+    wordCountDisplay.textContent = ++gameResults.wordCount;
 
     // 3. Display the correct English translation
     const portugueseWord = wordDisplay.textContent.toLowerCase();
@@ -72,8 +80,8 @@ checkButton.addEventListener('click', function () {
     if (currentWordPair && currentWordPair.english.split(',').some(translation =>
         translation.trim().toLowerCase() === userTranslation || translation.trim().toLowerCase() === `to ${userTranslation}`)) {
         // 5. If correct, increase the score by 1
-        const score = parseInt(scoreDisplay.textContent);
-        scoreDisplay.textContent = score + 1;
+        // const score = parseInt(scoreDisplay.textContent);
+        scoreDisplay.textContent = ++gameResults.score;
         result.textContent = "Correct";
         result.style.color = "green";
     } else {

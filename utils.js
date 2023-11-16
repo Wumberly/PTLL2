@@ -1,24 +1,24 @@
 let timerInterval;
-let timeRemaining = 0;
+// let timeRemaining = 0;
 
 const startButton = document.getElementById('start-game');
 const mainContainer = document.getElementById('main-container');
 
 // Start the game timer
-export function startTimer() {
+export function startTimer(time,callback) {
     // Clear any previous intervals to avoid multiple timers running simultaneously
     clearInterval(timerInterval);
 
-    timeRemaining = 30; // Set the desired time in seconds
-    updateTimeDisplay(timeRemaining); // Update the timer display initially
+    // timeRemaining = time; // Set the desired time in seconds
+    updateTimeDisplay(time); // Update the timer display initially
 
     const checkButton = document.getElementById('check-translation');
 
   // Start the timer interval
   timerInterval = setInterval(() => {
-    if (timeRemaining > 0) {
-        timeRemaining--;
-        updateTimeDisplay(timeRemaining);
+    if (time > 0) {
+        time--;
+        updateTimeDisplay(time);
     } else {
         // Time is up - handle game over or other actions
         console.log("Timer has ended");
@@ -28,8 +28,10 @@ export function startTimer() {
         checkButton.disabled = true;
 
         mainContainer.style.display = 'none'
+        
+        callback()
 
-        togglePopup(true);
+        // togglePopup(true);
 
         
     }
@@ -42,7 +44,7 @@ function updateTimeDisplay(time) {
 }
 
 
-export function togglePopup(show) {
+export function togglePopup(show,score,wordCount) {
     // Get the reference to the popup container
     const popupContainer = document.getElementById('popup-container');
 
@@ -54,6 +56,9 @@ export function togglePopup(show) {
         // Update the content of the popup
         popupContent.innerHTML = `
             <p>Game Over!</p>
+            <p>Hello!</p>
+            <p>Score: ${score}</p>
+            <p>wordCount: ${wordCount}</p>
             <button onclick="startNewGame()">Retry</button>
         `;
     }
