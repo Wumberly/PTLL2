@@ -2,8 +2,7 @@ let timerInterval;
 let timeRemaining = 0;
 
 const startButton = document.getElementById('start-game');
-const wordCountDisplay = document.getElementById('word-count');
-const scoreDisplay = document.getElementById('correct-count');
+const mainContainer = document.getElementById('main-container');
 
 // Start the game timer
 export function startTimer() {
@@ -28,7 +27,7 @@ export function startTimer() {
         // Disable the "check" button when the timer ends
         checkButton.disabled = true;
 
-        Container.style.display = 'none'
+        mainContainer.style.display = 'none'
 
         togglePopup(true)
 
