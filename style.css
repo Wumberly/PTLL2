@@ -188,8 +188,6 @@ input {
     background: white;
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
     border: 5px solid #000000;
     height: 800px;
     width: 800px;

@@ -28,10 +28,10 @@ export function startTimer() {
         // Disable the "check" button when the timer ends
         checkButton.disabled = true;
 
-        togglePopup(true)
-
         // Reappear the start button
         startButton.style.display = 'inline-block';
+
+        togglePopup(true)
 
         
     }
