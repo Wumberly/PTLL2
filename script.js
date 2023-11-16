@@ -13,6 +13,7 @@ const scoreDisplay = document.getElementById('correct-count');
 const correctTranslationText = document.getElementById('correct-translation-text');
 const translatedText = document.getElementById('translated-text')
 const result = document.getElementById('result')
+const mainContainer = document.getElementById('main-container');
 
 // Define a variable to hold the word pairs
 let wordPairs = [];
