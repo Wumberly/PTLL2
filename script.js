@@ -30,7 +30,7 @@ fetch('verbs.json')
 
   startButton.addEventListener('click', () => {
 
-    mainContainer.style.display = 'block'
+    mainContainer.style.display = 'grid'
     // Reset the score and word count to zero
     scoreDisplay.textContent = "0";
     wordCountDisplay.textContent = "0";
