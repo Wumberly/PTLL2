@@ -35,7 +35,7 @@ fetch('verbs.json')
     scoreDisplay.textContent = "0";
     wordCountDisplay.textContent = "0";
 
-    togglePopup(false, scoreDisplay, wordCountDisplay)
+    togglePopup(false)
 
     // Enable the "check" button initially
     checkButton.disabled = false;

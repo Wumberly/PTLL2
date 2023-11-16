@@ -29,7 +29,7 @@ export function startTimer() {
 
         mainContainer.style.display = 'none'
 
-        togglePopup(true, scoreDisplay.textContent, wordCountDisplay.textContent);
+        togglePopup(true);
 
         
     }
@@ -42,7 +42,7 @@ function updateTimeDisplay(time) {
 }
 
 
-export function togglePopup(show, scoreDisplay, wordCountDisplay) {
+export function togglePopup(show) {
     // Get the reference to the popup container
     const popupContainer = document.getElementById('popup-container');
 
@@ -54,8 +54,6 @@ export function togglePopup(show, scoreDisplay, wordCountDisplay) {
         // Update the content of the popup
         popupContent.innerHTML = `
             <p>Game Over!</p>
-            <p>Score: ${scoreDisplay.textContent}</p>
-            <p>Word Count: ${wordCountDisplay.textContent}</p>
             <button onclick="startNewGame()">Retry</button>
         `;
     }
