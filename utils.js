@@ -29,7 +29,7 @@ export function startTimer() {
 
         mainContainer.style.display = 'none'
 
-        togglePopup(true, scoreDisplay, wordCountDisplay);
+        togglePopup(true, scoreDisplay.textContent, wordCountDisplay.textContent);
 
         
     }
