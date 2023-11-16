@@ -187,11 +187,10 @@ input {
 #popup-container {
     background: white;
     display: none;
-    position: fixed;
     border: 5px solid #000000;
     height: 800px;
     width: 800px;
-    
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
 }
