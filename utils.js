@@ -29,7 +29,7 @@ export function startTimer() {
         checkButton.disabled = true;
 
         // Reappear the start button
-        startButton.style.display = 'inline-block';
+        // startButton.style.display = 'inline-block';
 
         togglePopup(true)
 
@@ -56,7 +56,7 @@ export function togglePopup(show) {
         // Update the content of the popup
         popupContent.innerHTML = `
             <p>Game Over!</p>
-            <button onclick="startNewGame()">Start Game</button>
+            <button onclick="startNewGame()">Retry</button>
         `;
     }
 
