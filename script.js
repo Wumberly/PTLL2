@@ -19,6 +19,7 @@ const mainContainer = document.getElementById('main-container');
 let wordPairs = [];
 let gameResults
 let time = 15
+let wordAttempts = [];
 
 // Load and parse the JSON data
 fetch('verbs.json')
@@ -31,6 +32,9 @@ fetch('verbs.json')
   });
 
   startButton.addEventListener('click', () => {
+
+    // Clear the word attempts array
+    wordAttempts.length = 0;
 
     gameResults = {
       score: 0,
@@ -59,7 +63,7 @@ fetch('verbs.json')
   
     // Start the timer
     startTimer(time,()=>{
-      togglePopup(true, gameResults.score, gameResults.wordCount)});
+      togglePopup(true, gameResults.score, gameResults.wordCount, wordAttempts)});
 });
 
 checkButton.addEventListener('click', function () {
@@ -86,7 +90,18 @@ checkButton.addEventListener('click', function () {
       // Incorrect answer
       result.textContent = "Incorrect";
       result.style.color = "red";
-  }
+    }
+
+    // Store the information for the word attempt
+    const wordNumber = gameResults.wordCount;
+    const wordData = {
+        wordNumber,
+        portugueseWord: currentWordPair.portuguese,
+        userTranslation,
+        correctTranslation: currentWordPair.english,
+        result: result.textContent === "Correct" ? "Correct" : "Incorrect",
+    };
+    wordAttempts.push(wordData);
 
     // 6. Clear the translation field
     translationInput.value = '';

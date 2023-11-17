@@ -39,7 +39,7 @@ function updateTimeDisplay(time) {
 }
 
 
-export function togglePopup(show,score,wordCount) {
+export function togglePopup(show,score,wordCount,wordAttempts ) {
     // Get the reference to the popup container
     const popupContainer = document.getElementById('popup-container');
 
@@ -49,9 +49,10 @@ export function togglePopup(show,score,wordCount) {
     // If the popup is set to show, update its content
     if (show) {
         // Update the content of the popup
+        const tableRows = generateTableRows(wordAttempts);
         popupContent.innerHTML = `
+            ${tableRows}
             <p>Game Over!</p>
-            <p>Hello!</p>
             <p>Score: ${score}</p>
             <p>wordCount: ${wordCount}</p>
             <button onclick="startNewGame()">Retry</button>
@@ -74,3 +75,31 @@ window.redirectToHomepage = function () {
     // Add logic to redirect to the homepage
     window.location.href = 'index.html';
 };
+
+// Function to generate table rows based on word attempt information
+function generateTableRows(wordAttempts) {
+    return `
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Word</th>
+                    <th>Attempt</th>
+                    <th>Correct</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${wordAttempts.map((wordData, index) => `
+                    <tr>
+                        <td>${wordData.wordNumber}</td>
+                        <td>${wordData.portugueseWord}</td>
+                        <td>${wordData.userTranslation}</td>
+                        <td>${wordData.correctTranslation}</td>
+                        <td>${wordData.result}</td>
+                    </tr>
+                `).join('')}
+            </tbody>
+        </table>
+    `;
+}
