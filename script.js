@@ -64,7 +64,6 @@ fetch('verbs.json')
 
 checkButton.addEventListener('click', function () {
     // 1. Increase the word count by 1
-    // const wordCount = parseInt(wordCountDisplay.textContent);
     wordCountDisplay.textContent = ++gameResults.wordCount;
 
     // 3. Display the correct English translation
@@ -80,7 +79,6 @@ checkButton.addEventListener('click', function () {
     if (currentWordPair && currentWordPair.english.split(',').some(translation =>
         translation.trim().toLowerCase() === userTranslation || translation.trim().toLowerCase() === `to ${userTranslation}`)) {
         // 5. If correct, increase the score by 1
-        // const score = parseInt(scoreDisplay.textContent);
         scoreDisplay.textContent = ++gameResults.score;
         result.textContent = "Correct";
         result.style.color = "green";

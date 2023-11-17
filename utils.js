@@ -1,5 +1,4 @@
 let timerInterval;
-// let timeRemaining = 0;
 
 const startButton = document.getElementById('start-game');
 const mainContainer = document.getElementById('main-container');
@@ -9,7 +8,6 @@ export function startTimer(time,callback) {
     // Clear any previous intervals to avoid multiple timers running simultaneously
     clearInterval(timerInterval);
 
-    // timeRemaining = time; // Set the desired time in seconds
     updateTimeDisplay(time); // Update the timer display initially
 
     const checkButton = document.getElementById('check-translation');
@@ -31,9 +29,6 @@ export function startTimer(time,callback) {
         
         callback()
 
-        // togglePopup(true);
-
-        
     }
 }, 1000); // Update the timer every second (1000 milliseconds)
 }
@@ -60,6 +55,7 @@ export function togglePopup(show,score,wordCount) {
             <p>Score: ${score}</p>
             <p>wordCount: ${wordCount}</p>
             <button onclick="startNewGame()">Retry</button>
+            <button onclick="redirectToHomepage()">Leave</button>
         `;
     }
 
@@ -71,4 +67,10 @@ export function togglePopup(show,score,wordCount) {
 window.startNewGame = function () {
     // Trigger the click event on the Start button
     startButton.click();
+};
+
+// Function to redirect to the homepage
+window.redirectToHomepage = function () {
+    // Add logic to redirect to the homepage
+    window.location.href = 'index.html';
 };
