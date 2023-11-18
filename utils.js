@@ -48,15 +48,31 @@ export function togglePopup(show,score,wordCount,wordAttempts ) {
 
     // If the popup is set to show, update its content
     if (show) {
+        // Calculate the percentage
+        const percentage = ((score / wordCount) * 100).toFixed(0);
         // Update the content of the popup
         const tableRows = generateTableRows(wordAttempts);
         popupContent.innerHTML = `
+            <p>Time's up!</p>
             ${tableRows}
-            <p>Game Over!</p>
-            <p>Score: ${score}</p>
-            <p>wordCount: ${wordCount}</p>
-            <button onclick="startNewGame()">Retry</button>
-            <button onclick="redirectToHomepage()">Leave</button>
+            <table class="summary-table">
+                <thead>
+                    <tr>
+                        <th>Count</th>
+                        <th>Correct</th>
+                        <th>Perc.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${wordCount}</td>
+                        <td>${score}</td>
+                        <td>${percentage}%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="button" id = "retry-button" onclick="startNewGame()">Retry</button>
+            <button class="button" id = "leave-button" onclick="redirectToHomepage()">Leave</button>
         `;
     }
 
@@ -79,7 +95,7 @@ window.redirectToHomepage = function () {
 // Function to generate table rows based on word attempt information
 function generateTableRows(wordAttempts) {
     return `
-        <table>
+        <table class="attempts-table">
             <thead>
                 <tr>
                     <th>#</th>

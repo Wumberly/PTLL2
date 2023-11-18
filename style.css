@@ -24,7 +24,7 @@ body {
 /* Level 2 */
 
 .subcontainer{
-    background-color: #ccc;
+    background-color: #CDD9E7;
     border: 2px solid #000000;
     padding: 20px;
     display: grid;
@@ -70,7 +70,7 @@ body {
 /* Level 3B */
 
 .nested-container2 {
-    background-color: #ccc;
+    background-color: #CDD9E7;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 2fr;
@@ -103,7 +103,7 @@ body {
 }
 
 .sec2 {
-    background-color: #ccc;
+    background-color: #CDD9E7;
     grid-row: span 2;
     border: 1px solid black;
     width: 95%;
@@ -185,9 +185,9 @@ input {
 /* ----------------------------------------- */
 /* -----------------Popup-------------------- */
 #popup-container {
-    background: white;
-    display: none;
+    background: #fff;
     border: 5px solid #000000;
+    display: none;
     height: 800px;
     width: 800px;
     border-radius: 10px;
@@ -196,11 +196,45 @@ input {
 }
 
 #popup-content {
-    background: #fff;
     padding: 20px;
+    margin: 10px;
     border-radius: 10px;
     text-align: center;
 }
 
+/* -------------------tables---------------------- */
+.summary-table, .attempts-table {
+    background-color: #CDD9E7;
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+}
+
+/*titles*/
+.summary-table th, .attempts-table th {
+    padding: 20px;
+    border-bottom: 1px solid #000000;
+}
+/*content*/
+.summary-table td, .attempts-table td {
+    padding: 20px;
+}
+
+.summary-table td {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+/* -----------------------buttons------------------ */
+#leave-button {
+    margin: 10px;
+    background-color: #fff;
+    border: 2px solid #37E5F5;
+    color: #37E5F5;
+    font-weight: bold;
+}
+
 /* ----------------------------------------- */
 /* ----------------------------------------- */
+
