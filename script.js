@@ -53,7 +53,7 @@ fetch('verbs.json')
   
     // Clear the translation field and correct answer field
     translationInput.value = '';
-    correctTranslationText.textContent = '';
+    correctTranslationText.textContent = '...';
   
     // Generate a new word
     updateWordDisplay(wordPairs, wordDisplay);
