@@ -15,10 +15,15 @@ const translatedText = document.getElementById('translated-text')
 const result = document.getElementById('result')
 const mainContainer = document.getElementById('main-container');
 
+// Add an event listener to the element with id "home"
+document.getElementById('home').addEventListener('click', function () {
+  window.location.href = 'index.html';
+});
+
 // Define a variable to hold the word pairs
 let wordPairs = [];
 let gameResults
-let time = 15
+let time = 30
 let wordAttempts = [];
 
 // Load and parse the JSON data
