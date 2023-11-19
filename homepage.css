@@ -1,133 +1,124 @@
-/* Level 1 */
 
+/* CSS Structure
+
+1. All the containers and sub containers
+2. Specific elements
+3. Navigation bar section
+
+*/
+
+/* ----------------------------------------- */
+/* -----------------Containers-------------------- */
+
+/* This is the full screen*/
 body {
     background-color: #7499AF;
     display: flex;
     align-items: center;
     justify-content: center;
 }
- 
-.container {
+
+/* This is the full game container */
+.game-container {
     background-color: #ffffff;
     border-radius: 10px;
     display: grid;
     padding: 20px;
-    border: 5px solid #000000;
     height: 800px;
-    width: 800px;
+    width: 1000px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr;
     gap: 20px;
 }
 
 /* ----------------------------------------- */
-/* ----------------------------------------- */
-
-.subcontainer{
-    background-color: #ccc;
-    border: 2px solid #000000;
-    padding: 20px;
-    display: grid;
+/* ---------------Title & Navbar---------------------- */
+.title-container {
+    margin: 0;
+    justify-content: left;
 }
 
-.nested-container {
-    display: grid;
-    gap: 10px;
+#site-title {
+    font-size: 96px;
+    margin: 0;
+    padding: 0;
 }
 
-.item1{
+.nav-container {
     background-color: #ffffff; 
-}
-
-/* controlling navbar & sitename box */
-.layer3 {
-    background-color: #ffffff; 
-    border: 1px solid #000000;
     font-size:larger;
     padding: 5px;
-    display: grid;
+    display: flex;
     place-items: center;
 }
 
-/* ----------------------------------------- */
-/* ------------------NAVBAR----------------- */
-
-.navbar {
+.navbarleft {
     display: flex;
+    flex: 1;
+    gap: 15%;
+}
+
+.navbarright {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap: 15%;
 }
 
 .navbarel {
     padding: 0;
     margin: 0;
-    margin-right: 3%;
 }
 
 
-/* ----------------------------------------- */
-/* ----------------------------------------- */
+/* -----------------Default button class-------------------- */
+.button {
+    background-color: #37E5F5;
+    color: #000000;
+    display:block;
+    padding: 20px 30px;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
 
-/* ----------------------------------------- */
-/* -----------TITLE SECTION----------------- */
-
-.sitename {
-    background-color: #ffffff; 
-    font-size: large; 
-    display: flex;
-    align-items: center;
-    margin: 0;
-    border: 1px solid #000000;
-    font-size:larger;
-    padding: 5px;
-
+    cursor: pointer;
 }
 
-#rote-learn-heading {
-    margin: 0;
-}
+/* -----------------action container-------------------- */
 
-/* ----------------------------------------- */
-/* ----------------------------------------- */
-
-/* ----------------------------------------- */
-/* -----------Lower Box (Item 2)------------ */
-
-.item2 {
+.action-container {
+    background-color: #CDD9E7;
+    border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1fr 1fr;
 }
 
-.gamebox {
+.item {
     background-color: #ffffff;
-    border: 2px solid #000000;
-    padding: 0px;
-    margin: 5px;
+    margin: 10px;
+    border-radius: 10px;
     display: grid;
-    place-content: center;
 }
 
-/* ----------------------------------------- */
-/* ----------------------------------------- */
-
-
-/* Elements */
-
-input {
-    padding: 20px;
-    font-size: 16px;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    width:50%;
+.item-2 {
+    grid-column: span 2;
 }
 
-.button {
-    background-color: #37E5F5;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #000000;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+#quick-play-button {
+    position: absolute;
+    place-self: center;
+    align-self: last baseline;
+}
+
+.gamebut {
+    position: absolute;
+    place-self: center;
+    align-self: last baseline;
+}
+
+.stan-text {
+    font-size: 32px;
+    justify-self: center;
 }
