@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grammar.css">
+    <title>RoteLearn - Grammar Trainer</title>
+
+    <script type="module" src="utils.js"></script>
+    <script type="module" src="game.js"></script>
+    <script type="module" src="script.js"></script>
+</head>
+<!---------------------------------------------------------------------------------->
+<body>
+    <div class="game-container">
+        <div class="navbar-container subcontainer">
+            <div class="navbarleft">
+                <p class = "navel" id = "home"> Home</p>
+                <p class = "navel" id = "about"> About</p>
+            </div>
+            <div class="navbarright">
+                <p class = "navel" id = "profile"> Profile</p>
+                <p class = "navel" id = "settings"> Settings</p>
+            </div>
+        </div>
+        <div class="title-container subcontainer">
+            <h1 id="RoteLearn">Rote<strong>Learn</strong></h1>
+            <h2 id = "GrammarTrainer"> Grammar Trainer</h2>
+        </div>
+        <div class="time-container subcontainer">
+            <div class="time-container-splitter item" id = "item1">
+                <button class="button">Start</button>
+            </div>
+            <div class="time-container-splitter item" id = "item2">30s</div>
+        </div>
+        <div class="gameplay-container subcontainer">
+            <div class="gameplay-container-splitter item" id = "item3">Verb</div>
+            <div class="gameplay-container-splitter item" id = "item4">Tense</div>
+            <div class="gameplay-container-splitter item" id = "item5">Subject</div>
+            <div class="gameplay-container-splitter item" id = "item6">
+                <input type="text" placeholder="Enter Conjugation">
+            </div>
+            <div class="gameplay-container-splitter item" id = "item7">
+                <button class="button">Check</button>
+            </div>
+        </div>
+        <div class="correction-container subcontainer">
+            <div class="correction-container-splitter item" id = "item8">Incorrect</div>
+            <div class="correction-container-splitter item" id = "item9">Comi</div>
+        </div>
+        <div class="scorebox-container subcontainer">
+            <div class="correction-container-splitter item" id = "item10">Count</div>
+            <div class="correction-container-splitter item" id = "item11">Score</div>
+            <div class="correction-container-splitter item" id = "item12">Perc.</div>
+            <div class="correction-container-splitter item" id = "item13">10</div>
+            <div class="correction-container-splitter item" id = "item14">8</div>
+            <div class="correction-container-splitter item" id = "item15">80%</div>
+        </div>
+        <div class="level-container subcontainer">
+            <p id = "leveltitle"> Level Select:</p>
+            <button class="node" onclick="selectNode(1)">1</button>
+            <button class="node" onclick="selectNode(2)">2</button>
+            <button class="node" onclick="selectNode(3)">3</button>
+            <button class="node" onclick="selectNode(4)">4</button>
+            <button class="node" onclick="selectNode(5)">5</button>
+            <button class="node" onclick="selectNode(6)">6</button>
+            <button class="node" onclick="selectNode(7)">7</button>
+            <button class="node" onclick="selectNode(8)">8</button>
+            <button class="node" onclick="selectNode(9)">9</button>
+            <button class="node" onclick="selectNode(10)">10</button>
+        </div>
+    </div>
+
+</body>
+</html>
