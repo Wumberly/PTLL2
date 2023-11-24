@@ -17,7 +17,7 @@ const mainContainer = document.getElementById('main-container');
 
 // Add an event listener to the element with id "home"
 document.getElementById('home').addEventListener('click', function () {
-  window.location.href = 'index.html';
+  window.location.href = 'Homepage/index.html';
 });
 
 // Define a variable to hold the word pairs
