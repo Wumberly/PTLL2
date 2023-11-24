@@ -1,0 +1,199 @@
+Index,Verb,ConjType,Tense,Subject,Conjugation,Regular,Frequency,Frequency level,Level
+1,ser,Indicative,Presente,eu,sou,FALSE,356720,1 Very High,1
+2,ser,Indicative,Presente,tu,és,FALSE,219447,2 High,2
+3,ser,Indicative,Presente,ele/ela/você,é,FALSE,0,5 Very Low,5
+4,ser,Indicative,Presente,nós,somos,FALSE,75501,2 High,2
+5,ser,Indicative,Presente,vós,sois,FALSE,3236,4 Low,5
+6,ser,Indicative,Presente,eles/elas/vocês,são,FALSE,343012,1 Very High,1
+7,ser,Indicative,Pretérito Perfeito,eu,fui,FALSE,80460,2 High,2
+8,ser,Indicative,Pretérito Perfeito,tu,foste,FALSE,34094,3 Medium,3
+9,ser,Indicative,Pretérito Perfeito,ele/ela/você,foi,FALSE,632389,1 Very High,1
+10,ser,Indicative,Pretérito Perfeito,nós,fomos,FALSE,19236,3 Medium,3
+11,ser,Indicative,Pretérito Perfeito,vós,fostes,FALSE,0,5 Very Low,5
+12,ser,Indicative,Pretérito Perfeito,eles/elas/vocês,foram,FALSE,68397,2 High,2
+13,ser,Indicative,Pretérito Imperfeito,eu,era,FALSE,366306,1 Very High,1
+14,ser,Indicative,Pretérito Imperfeito,tu,eras,FALSE,16762,3 Medium,3
+15,ser,Indicative,Pretérito Imperfeito,ele/ela/você,era,FALSE,366306,1 Very High,1
+16,ser,Indicative,Pretérito Imperfeito,nós,éramos,FALSE,9346,4 Low,5
+17,ser,Indicative,Pretérito Imperfeito,vós,éreis,FALSE,0,5 Very Low,5
+18,ser,Indicative,Pretérito Imperfeito,eles/elas/vocês,eram,FALSE,40243,3 Medium,3
+19,ir,Indicative,Presente,eu,vou,FALSE,482399,1 Very High,1
+20,ir,Indicative,Presente,tu,vais,FALSE,178199,2 High,2
+21,ir,Indicative,Presente,ele/ela/você,vai,FALSE,581657,1 Very High,1
+22,ir,Indicative,Presente,nós,vamos,FALSE,610796,1 Very High,1
+23,ir,Indicative,Presente,vós,ides,FALSE,0,5 Very Low,5
+24,ir,Indicative,Presente,eles/elas/vocês,vão,FALSE,144475,2 High,2
+25,ir,Indicative,Pretérito Perfeito,eu,fui,FALSE,80460,2 High,2
+26,ir,Indicative,Pretérito Perfeito,tu,foste,FALSE,34094,3 Medium,3
+27,ir,Indicative,Pretérito Perfeito,ele/ela/você,foi,FALSE,632389,1 Very High,1
+28,ir,Indicative,Pretérito Perfeito,nós,fomos,FALSE,19236,3 Medium,3
+29,ir,Indicative,Pretérito Perfeito,vós,fostes,FALSE,0,5 Very Low,5
+30,ir,Indicative,Pretérito Perfeito,eles/elas/vocês,foram,FALSE,68397,2 High,2
+31,ir,Indicative,Pretérito Imperfeito,eu,ia,TRUE,69763,2 High,1
+32,ir,Indicative,Pretérito Imperfeito,tu,ias,TRUE,12155,3 Medium,2
+33,ir,Indicative,Pretérito Imperfeito,ele/ela/você,ia,TRUE,69763,2 High,1
+34,ir,Indicative,Pretérito Imperfeito,nós,íamos,TRUE,8061,4 Low,3
+35,ir,Indicative,Pretérito Imperfeito,vós,íeis,TRUE,0,5 Very Low,4
+36,ir,Indicative,Pretérito Imperfeito,eles/elas/vocês,iam,TRUE,8013,4 Low,3
+37,ver,Indicative,Presente,eu,vejo,FALSE,56813,2 High,2
+38,ver,Indicative,Presente,tu,vês,FALSE,26343,3 Medium,3
+39,ver,Indicative,Presente,ele/ela/você,vê,FALSE,85545,2 High,2
+40,ver,Indicative,Presente,nós,vemos,FALSE,8170,4 Low,5
+41,ver,Indicative,Presente,vós,vedes,FALSE,0,5 Very Low,5
+42,ver,Indicative,Presente,eles/elas/vocês,vêem,FALSE,9001,4 Low,5
+43,ver,Indicative,Pretérito Perfeito,eu,vi,TRUE,91351,2 High,1
+44,ver,Indicative,Pretérito Perfeito,tu,viste,TRUE,29308,3 Medium,2
+45,ver,Indicative,Pretérito Perfeito,ele/ela/você,viu,TRUE,47084,3 Medium,2
+46,ver,Indicative,Pretérito Perfeito,nós,vimos,TRUE,10575,3 Medium,2
+47,ver,Indicative,Pretérito Perfeito,vós,vistes,TRUE,0,5 Very Low,4
+48,ver,Indicative,Pretérito Perfeito,eles/elas/vocês,viram,TRUE,12860,3 Medium,2
+49,ver,Indicative,Pretérito Imperfeito,eu,via,TRUE,9564,4 Low,3
+50,ver,Indicative,Pretérito Imperfeito,tu,vias,TRUE,0,5 Very Low,4
+51,ver,Indicative,Pretérito Imperfeito,ele/ela/você,via,TRUE,9564,4 Low,3
+52,ver,Indicative,Pretérito Imperfeito,nós,víamos,TRUE,0,5 Very Low,4
+53,ver,Indicative,Pretérito Imperfeito,vós,víeis,TRUE,0,5 Very Low,4
+54,ver,Indicative,Pretérito Imperfeito,eles/elas/vocês,viam,TRUE,0,5 Very Low,4
+55,fazer,Indicative,Presente,eu,faço,FALSE,57134,2 High,2
+56,fazer,Indicative,Presente,tu,fazes,TRUE,40131,3 Medium,2
+57,fazer,Indicative,Presente,ele/ela/você,faz,FALSE,174067,2 High,2
+58,fazer,Indicative,Presente,nós,fazemos,TRUE,26903,3 Medium,2
+59,fazer,Indicative,Presente,vós,fazeis,TRUE,0,5 Very Low,4
+60,fazer,Indicative,Presente,eles/elas/vocês,fazem,TRUE,34481,3 Medium,2
+61,fazer,Indicative,Pretérito Perfeito,eu,fiz,FALSE,70393,2 High,2
+62,fazer,Indicative,Pretérito Perfeito,tu,fizeste,FALSE,42626,3 Medium,3
+63,fazer,Indicative,Pretérito Perfeito,ele/ela/você,fez,FALSE,101651,2 High,2
+64,fazer,Indicative,Pretérito Perfeito,nós,fizemos,FALSE,17519,3 Medium,3
+65,fazer,Indicative,Pretérito Perfeito,vós,fizestes,FALSE,0,5 Very Low,5
+66,fazer,Indicative,Pretérito Perfeito,eles/elas/vocês,fizeram,FALSE,23283,3 Medium,3
+67,fazer,Indicative,Pretérito Imperfeito,eu,fazia,TRUE,19664,3 Medium,2
+68,fazer,Indicative,Pretérito Imperfeito,tu,fazias,TRUE,0,5 Very Low,4
+69,fazer,Indicative,Pretérito Imperfeito,ele/ela/você,fazia,TRUE,19664,3 Medium,2
+70,fazer,Indicative,Pretérito Imperfeito,nós,fazíamos,TRUE,0,5 Very Low,4
+71,fazer,Indicative,Pretérito Imperfeito,vós,fazíeis,TRUE,0,5 Very Low,4
+72,fazer,Indicative,Pretérito Imperfeito,eles/elas/vocês,faziam,TRUE,3473,4 Low,3
+73,estar,Indicative,Presente,eu,estou,FALSE,613532,1 Very High,1
+74,estar,Indicative,Presente,tu,estás,FALSE,415214,1 Very High,1
+75,estar,Indicative,Presente,ele/ela/você,está,FALSE,1560804,1 Very High,1
+76,estar,Indicative,Presente,nós,estamos,FALSE,212978,2 High,2
+77,estar,Indicative,Presente,vós,estais,FALSE,2862,4 Low,5
+78,estar,Indicative,Presente,eles/elas/vocês,estão,FALSE,285642,2 High,2
+79,estar,Indicative,Pretérito Perfeito,eu,estive,FALSE,29099,3 Medium,3
+80,estar,Indicative,Pretérito Perfeito,tu,estiveste,FALSE,12632,3 Medium,3
+81,estar,Indicative,Pretérito Perfeito,ele/ela/você,esteve,FALSE,27135,3 Medium,3
+82,estar,Indicative,Pretérito Perfeito,nós,estivemos,FALSE,5606,4 Low,5
+83,estar,Indicative,Pretérito Perfeito,vós,estivestes,FALSE,0,5 Very Low,5
+84,estar,Indicative,Pretérito Perfeito,eles/elas/vocês,estiveram,FALSE,5064,4 Low,5
+85,estar,Indicative,Pretérito Imperfeito,eu,estava,TRUE,304455,1 Very High,1
+86,estar,Indicative,Pretérito Imperfeito,tu,estavas,TRUE,32302,3 Medium,2
+87,estar,Indicative,Pretérito Imperfeito,ele/ela/você,estava,TRUE,304455,1 Very High,1
+88,estar,Indicative,Pretérito Imperfeito,nós,estávamos,TRUE,23593,3 Medium,2
+89,estar,Indicative,Pretérito Imperfeito,vós,estáveis,TRUE,0,5 Very Low,4
+90,estar,Indicative,Pretérito Imperfeito,eles/elas/vocês,estavam,TRUE,35322,3 Medium,2
+91,haver,Indicative,Presente,eu,hei,FALSE,0,5 Very Low,5
+92,haver,Indicative,Presente,tu,hás,FALSE,0,5 Very Low,5
+93,haver,Indicative,Presente,ele/ela/você,há,FALSE,458923,1 Very High,1
+94,haver,Indicative,Presente,nós,hemos,FALSE,0,5 Very Low,5
+95,haver,Indicative,Presente,vós,heis,FALSE,0,5 Very Low,5
+96,haver,Indicative,Presente,eles/elas/vocês,hão,FALSE,0,5 Very Low,5
+97,haver,Indicative,Pretérito Perfeito,eu,houve,FALSE,30393,3 Medium,3
+98,haver,Indicative,Pretérito Perfeito,tu,houveste,FALSE,0,5 Very Low,5
+99,haver,Indicative,Pretérito Perfeito,ele/ela/você,houve,FALSE,30393,3 Medium,3
+100,haver,Indicative,Pretérito Perfeito,nós,houvemos,FALSE,0,5 Very Low,5
+101,haver,Indicative,Pretérito Perfeito,vós,houvestes,FALSE,0,5 Very Low,5
+102,haver,Indicative,Pretérito Perfeito,eles/elas/vocês,houveram,FALSE,0,5 Very Low,5
+103,haver,Indicative,Pretérito Imperfeito,eu,havia,TRUE,43755,3 Medium,2
+104,haver,Indicative,Pretérito Imperfeito,tu,havias,TRUE,0,5 Very Low,4
+105,haver,Indicative,Pretérito Imperfeito,ele/ela/você,havia,TRUE,43755,3 Medium,2
+106,haver,Indicative,Pretérito Imperfeito,nós,havíamos,TRUE,0,5 Very Low,4
+107,haver,Indicative,Pretérito Imperfeito,vós,havíeis,TRUE,0,5 Very Low,4
+108,haver,Indicative,Pretérito Imperfeito,eles/elas/vocês,haviam,TRUE,2645,4 Low,3
+109,vir,Indicative,Presente,eu,venho,FALSE,9549,4 Low,5
+110,vir,Indicative,Presente,tu,vens,FALSE,11171,3 Medium,3
+111,vir,Indicative,Presente,ele/ela/você,vem,FALSE,97774,2 High,2
+112,vir,Indicative,Presente,nós,vimos,FALSE,10575,3 Medium,3
+113,vir,Indicative,Presente,vós,vindes,FALSE,0,5 Very Low,5
+114,vir,Indicative,Presente,eles/elas/vocês,vêm,FALSE,16504,3 Medium,3
+115,vir,Indicative,Pretérito Perfeito,eu,vim,FALSE,28338,3 Medium,3
+116,vir,Indicative,Pretérito Perfeito,tu,vieste,FALSE,9812,4 Low,5
+117,vir,Indicative,Pretérito Perfeito,ele/ela/você,veio,FALSE,36297,3 Medium,3
+118,vir,Indicative,Pretérito Perfeito,nós,viemos,FALSE,8514,4 Low,5
+119,vir,Indicative,Pretérito Perfeito,vós,viestes,FALSE,0,5 Very Low,5
+120,vir,Indicative,Pretérito Perfeito,eles/elas/vocês,vieram,FALSE,10096,3 Medium,3
+121,vir,Indicative,Pretérito Imperfeito,eu,vinha,FALSE,7311,4 Low,5
+122,vir,Indicative,Pretérito Imperfeito,tu,vinhas,FALSE,0,5 Very Low,5
+123,vir,Indicative,Pretérito Imperfeito,ele/ela/você,vinha,FALSE,7311,4 Low,5
+124,vir,Indicative,Pretérito Imperfeito,nós,vínhamos,FALSE,0,5 Very Low,5
+125,vir,Indicative,Pretérito Imperfeito,vós,vínheis,FALSE,0,5 Very Low,5
+126,vir,Indicative,Pretérito Imperfeito,eles/elas/vocês,vinham,FALSE,0,5 Very Low,5
+127,poder,Indicative,Presente,eu,posso,FALSE,292576,2 High,2
+128,poder,Indicative,Presente,tu,podes,TRUE,135329,2 High,1
+129,poder,Indicative,Presente,ele/ela/você,pode,TRUE,336746,1 Very High,1
+130,poder,Indicative,Presente,nós,podemos,TRUE,129288,2 High,1
+131,poder,Indicative,Presente,vós,podeis,TRUE,0,5 Very Low,4
+132,poder,Indicative,Presente,eles/elas/vocês,podem,TRUE,77493,2 High,1
+133,poder,Indicative,Pretérito Perfeito,eu,pude,FALSE,8564,4 Low,5
+134,poder,Indicative,Pretérito Perfeito,tu,pudeste,FALSE,0,5 Very Low,5
+135,poder,Indicative,Pretérito Perfeito,ele/ela/você,pôde,FALSE,4240,4 Low,5
+136,poder,Indicative,Pretérito Perfeito,nós,pudemos,FALSE,0,5 Very Low,5
+137,poder,Indicative,Pretérito Perfeito,vós,pudestes,FALSE,0,5 Very Low,5
+138,poder,Indicative,Pretérito Perfeito,eles/elas/vocês,puderam,FALSE,0,5 Very Low,5
+139,poder,Indicative,Pretérito Imperfeito,eu,podia,TRUE,66725,2 High,1
+140,poder,Indicative,Pretérito Imperfeito,tu,podias,TRUE,16963,3 Medium,2
+141,poder,Indicative,Pretérito Imperfeito,ele/ela/você,podia,TRUE,66725,2 High,1
+142,poder,Indicative,Pretérito Imperfeito,nós,podíamos,TRUE,13443,3 Medium,2
+143,poder,Indicative,Pretérito Imperfeito,vós,podíeis,TRUE,0,5 Very Low,4
+144,poder,Indicative,Pretérito Imperfeito,eles/elas/vocês,podiam,TRUE,7768,4 Low,3
+145,comer,Indicative,Presente,eu,como,TRUE,1000426,1 Very High,1
+146,comer,Indicative,Presente,tu,comes,TRUE,0,5 Very Low,4
+147,comer,Indicative,Presente,ele/ela/você,come,TRUE,11342,3 Medium,2
+148,comer,Indicative,Presente,nós,comemos,TRUE,0,5 Very Low,4
+149,comer,Indicative,Presente,vós,comeis,TRUE,0,5 Very Low,4
+150,comer,Indicative,Presente,eles/elas/vocês,comem,TRUE,3206,4 Low,3
+151,comer,Indicative,Pretérito Perfeito,eu,comi,TRUE,4077,4 Low,3
+152,comer,Indicative,Pretérito Perfeito,tu,comeste,TRUE,0,5 Very Low,4
+153,comer,Indicative,Pretérito Perfeito,ele/ela/você,comeu,TRUE,4647,4 Low,3
+154,comer,Indicative,Pretérito Perfeito,nós,comemos,TRUE,0,5 Very Low,4
+155,comer,Indicative,Pretérito Perfeito,vós,comestes,TRUE,0,5 Very Low,4
+156,comer,Indicative,Pretérito Perfeito,eles/elas/vocês,comeram,TRUE,0,5 Very Low,4
+157,comer,Indicative,Pretérito Imperfeito,eu,comia,TRUE,0,5 Very Low,4
+158,comer,Indicative,Pretérito Imperfeito,tu,comias,TRUE,0,5 Very Low,4
+159,comer,Indicative,Pretérito Imperfeito,ele/ela/você,comia,TRUE,0,5 Very Low,4
+160,comer,Indicative,Pretérito Imperfeito,nós,comíamos,TRUE,0,5 Very Low,4
+161,comer,Indicative,Pretérito Imperfeito,vós,comíeis,TRUE,0,5 Very Low,4
+162,comer,Indicative,Pretérito Imperfeito,eles/elas/vocês,comiam,TRUE,0,5 Very Low,4
+163,correr,Indicative,Presente,eu,corro,TRUE,0,5 Very Low,4
+164,correr,Indicative,Presente,tu,corres,TRUE,0,5 Very Low,4
+165,correr,Indicative,Presente,ele/ela/você,corre,TRUE,13729,3 Medium,2
+166,correr,Indicative,Presente,nós,corremos,TRUE,0,5 Very Low,4
+167,correr,Indicative,Presente,vós,correis,TRUE,0,5 Very Low,4
+168,correr,Indicative,Presente,eles/elas/vocês,correm,TRUE,0,5 Very Low,4
+169,correr,Indicative,Pretérito Perfeito,eu,corri,TRUE,0,5 Very Low,4
+170,correr,Indicative,Pretérito Perfeito,tu,correste,TRUE,0,5 Very Low,4
+171,correr,Indicative,Pretérito Perfeito,ele/ela/você,correu,TRUE,10151,3 Medium,2
+172,correr,Indicative,Pretérito Perfeito,nós,corremos,TRUE,0,5 Very Low,4
+173,correr,Indicative,Pretérito Perfeito,vós,correstes,TRUE,0,5 Very Low,4
+174,correr,Indicative,Pretérito Perfeito,eles/elas/vocês,correram,TRUE,0,5 Very Low,4
+175,correr,Indicative,Pretérito Imperfeito,eu,corria,TRUE,0,5 Very Low,4
+176,correr,Indicative,Pretérito Imperfeito,tu,corrias,TRUE,0,5 Very Low,4
+177,correr,Indicative,Pretérito Imperfeito,ele/ela/você,corria,TRUE,0,5 Very Low,4
+178,correr,Indicative,Pretérito Imperfeito,nós,corríamos,TRUE,0,5 Very Low,4
+179,correr,Indicative,Pretérito Imperfeito,vós,corríeis,TRUE,0,5 Very Low,4
+180,correr,Indicative,Pretérito Imperfeito,eles/elas/vocês,corriam,TRUE,0,5 Very Low,4
+181,ter,Indicative,Presente,eu,tenho,FALSE,489679,1 Very High,1
+182,ter,Indicative,Presente,tu,tens,FALSE,259203,2 High,2
+183,ter,Indicative,Presente,ele/ela/você,tem,FALSE,550585,1 Very High,1
+184,ter,Indicative,Presente,nós,temos,FALSE,284748,2 High,2
+185,ter,Indicative,Presente,vós,tendes,FALSE,0,5 Very Low,5
+186,ter,Indicative,Presente,eles/elas/vocês,têm,FALSE,106843,2 High,2
+187,ter,Indicative,Pretérito Perfeito,eu,tive,FALSE,57347,2 High,2
+188,ter,Indicative,Pretérito Perfeito,tu,tiveste,FALSE,12412,3 Medium,3
+189,ter,Indicative,Pretérito Perfeito,ele/ela/você,teve,FALSE,43620,3 Medium,3
+190,ter,Indicative,Pretérito Perfeito,nós,tivemos,FALSE,16953,3 Medium,3
+191,ter,Indicative,Pretérito Perfeito,vós,tivestes,FALSE,0,5 Very Low,5
+192,ter,Indicative,Pretérito Perfeito,eles/elas/vocês,tiveram,FALSE,8684,4 Low,5
+193,ter,Indicative,Pretérito Imperfeito,eu,tinha,FALSE,179371,2 High,2
+194,ter,Indicative,Pretérito Imperfeito,tu,tinhas,FALSE,23449,3 Medium,3
+195,ter,Indicative,Pretérito Imperfeito,ele/ela/você,tinha,FALSE,179371,2 High,2
+196,ter,Indicative,Pretérito Imperfeito,nós,tínhamos,FALSE,15771,3 Medium,3
+197,ter,Indicative,Pretérito Imperfeito,vós,tínheis,FALSE,0,5 Very Low,5
+198,ter,Indicative,Pretérito Imperfeito,eles/elas/vocês,tinham,FALSE,20932,3 Medium,3

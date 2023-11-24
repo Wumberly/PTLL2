@@ -93,7 +93,8 @@ body {
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr
+    
 }
 
 .item {
@@ -103,20 +104,14 @@ body {
     display: grid;
 }
 
-.item-2 {
-    grid-column: span 2;
-}
-
 #quick-play-button {
     position: absolute;
     place-self: center;
-    align-self: last baseline;
 }
 
 .gamebut {
     position: absolute;
     place-self: center;
-    align-self: last baseline;
 }
 
 .stan-text {
