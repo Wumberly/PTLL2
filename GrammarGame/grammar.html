@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="grammar.css">
     <title>RoteLearn - Grammar Trainer</title>
 
-    <script type="module" src="utils.js"></script>
-    <script type="module" src="game.js"></script>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="grammar.js"></script>
 </head>
 <!---------------------------------------------------------------------------------->
 <body>
@@ -30,7 +28,7 @@
         </div>
         <div class="time-container subcontainer">
             <div class="time-container-splitter item" id = "item1">
-                <button class="button">Start</button>
+                <button id = "start-button" class="button">Start</button>
             </div>
             <div class="time-container-splitter item" id = "item2">30s</div>
         </div>
@@ -39,10 +37,10 @@
             <div class="gameplay-container-splitter item" id = "item4">Tense</div>
             <div class="gameplay-container-splitter item" id = "item5">Subject</div>
             <div class="gameplay-container-splitter item" id = "item6">
-                <input type="text" placeholder="Enter Conjugation">
+                <input id = "input-box" type="text" placeholder="Enter Conjugation">
             </div>
             <div class="gameplay-container-splitter item" id = "item7">
-                <button class="button">Check</button>
+                <button id = "check-button" class="button">Check</button>
             </div>
         </div>
         <div class="correction-container subcontainer">
