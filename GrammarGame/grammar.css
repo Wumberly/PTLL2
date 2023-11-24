@@ -215,9 +215,10 @@ body {
     justify-self: center;
 }
 
-.node.selected {
-    background-color: #af4c51;
-    color: #fff;
+.level-container .node.active {
+    background-color: #ffffff;
+    color: #426C94;
+    border: 3px solid #426C94;
 }
 
 #leveltitle {

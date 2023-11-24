@@ -1,8 +1,10 @@
 
+//Import functions...........................................................
 import { fetchCSVData } from './grammarFunctions.js';
 import { getRandomRow } from './fibonacci.js';
 
-// Get references to DOM elements
+// Get references to DOM elements............................................
+
 // Navbar elements
 const homeLink = document.getElementById('home');
 const aboutLink = document.getElementById('about');
@@ -32,56 +34,64 @@ const percentageItem = document.getElementById('item15');
 // Level container elements
 const levelButtons = document.querySelectorAll('.level-container .node');
 
+//Define constants and variables................................................
 let dataRows = [];
+let currentLevel = 1;
+
+
+
+//Import data...................................................................
 
 // Fetch CSV data and print a random row
 fetchCSVData("grammar.csv")
   .then(dataArray => {
     if (dataArray) {
       dataRows = dataArray;
-      const randomRow = getRandomRow(dataRows, 3);
-      console.log('Random Row:', randomRow);
     } else {
       console.error('Failed to fetch CSV data.');
     }
   });
 
 
+
+
+//Event Listeners...............................................................
+
 homeLink.addEventListener('click', function () {
   window.location.href = '../Homepage/index.html';
 });
 
-
-let levelsArray = [];
 startButton.addEventListener('click', function () {
     console.log('Start button clicked');
-
-    // Get a random row
-    const currentRow = getRandomRow(dataRows, 5);
-
-    // Check if a valid row is returned
-    if (currentRow !== null) {
-        // Extract the level from the current row
-        const level = parseInt(currentRow.Level);
-
-        // Push the level to the array
-        levelsArray.push(level);
-
-
-        // Display the count of each level
-        const levelCounts = Array.from({ length: 5 }, (_, i) =>
-            levelsArray.filter(l => l === i + 1).length
-        );
-
-        console.log('Level Counts:', levelCounts);
-    } else {
-        console.error('No valid row returned.');
-    }
+    const currentRow = getRandomRow(dataRows, currentLevel);
 });
 
 checkButton.addEventListener('click', function () {
   console.log('Check button clicked');
 });
+
+levelButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        // Remove the "active" class from all buttons
+        levelButtons.forEach(btn => {
+            btn.classList.remove('active');
+            btn.style.backgroundColor = '#426C94';
+            btn.style.color = '#ffffff';
+        });
+
+        // Add the "active" class to the clicked button
+        button.classList.add('active');
+
+        // Update styles for the clicked button
+        button.style.backgroundColor = '#ffffff';
+        button.style.color = '#426C94';
+
+        // Update the currentLevel variable
+        currentLevel = parseInt(button.textContent);
+        console.log(currentLevel);
+    });
+});
+
 
 
 

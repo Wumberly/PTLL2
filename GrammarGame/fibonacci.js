@@ -28,7 +28,6 @@ function getRandomRow(dataRows, targetLevel) {
 
     // Assign probabilities to each level
     let levelProbabilities = assignProbabilities(Array.from({ length: targetLevel }, (_, i) => i + 1), fibonacciSequence);
-    console.log(levelProbabilities);
 
     // Select a level based on probabilities
     const randomValue = Math.random();

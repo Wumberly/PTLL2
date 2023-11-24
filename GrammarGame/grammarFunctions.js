@@ -24,24 +24,5 @@ function fetchCSVData(csvFilePath) {
 
 // Export the function for use in other files
 export { fetchCSVData };
+//............................................................................
 
-function getRandomRow(dataRows, targetLevel) {
-    // Filter rows based on the specified level
-    const validRows = dataRows.filter(row => parseInt(row.Level) <= targetLevel);
-
-    // Check if there are valid rows
-    if (validRows.length > 0) {
-        // Get a random index within the valid rows
-        const randomIndex = Math.floor(Math.random() * validRows.length);
-
-        // Return the randomly selected row
-        return validRows[randomIndex];
-    } else {
-        console.log("gibbeldy googldy gop")
-        // If no valid rows, return null or handle the case accordingly
-        return null;
-    }
-}
-
-// Export the function for use in other files
-export { getRandomRow };
