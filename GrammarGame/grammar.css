@@ -182,6 +182,7 @@ body {
     margin: 0;
     padding: 0;
     align-self: center;
+    cursor: pointer;
 }
 
 #RoteLearn {

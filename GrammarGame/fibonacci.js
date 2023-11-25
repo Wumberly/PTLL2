@@ -5,20 +5,17 @@ function getRandomRow(dataRows, targetLevel) {
         for (let i = 2; i < n; i++) {
             sequence[i] = sequence[i - 1] + sequence[i - 2];
         }
-        console.log(sequence);
         return sequence;
     }
 
     // Function to assign probabilities to each level based on the Fibonacci sequence
     function assignProbabilities(levels, fibonacciSequence) {
         const sum = fibonacciSequence.reduce((accumulator, currentValue) => accumulator + currentValue, 0) - 1;
-        console.log("sum", sum);
         const probabilities = {};
 
         levels.forEach((level, index) => {
             probabilities[level] = fibonacciSequence[index + 1] / sum;
         });
-        console.log(probabilities);
         return probabilities;
     }
 
@@ -46,9 +43,6 @@ function getRandomRow(dataRows, targetLevel) {
 
     // If selectedIndex is still undefined, set it to targetLevel
     selectedLevel = selectedIndex !== undefined ? selectedIndex : targetLevel;
-
-
-    console.log("Selected Level:", selectedLevel);
 
     // Filter rows based on the selected level and targetLevel
     let validRows = dataRows.filter(row => parseInt(row.Level) <= targetLevel && parseInt(row.Level) == selectedLevel);

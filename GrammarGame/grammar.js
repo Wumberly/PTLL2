@@ -1,6 +1,6 @@
 
 //Import functions...........................................................
-import { fetchCSVData } from './grammarFunctions.js';
+import { fetchCSVData, startTimer } from './grammarFunctions.js';
 import { getRandomRow } from './fibonacci.js';
 
 // Get references to DOM elements............................................
@@ -16,9 +16,9 @@ const startButton = document.getElementById('start-button');
 const timeDisplay = document.getElementById('item2');
 
 // Gameplay container elements
-const verbItem = document.getElementById('item3');
-const tenseItem = document.getElementById('item4');
-const subjectItem = document.getElementById('item5');
+const subjectItem = document.getElementById('item3');
+const verbItem = document.getElementById('item4');
+const tenseItem = document.getElementById('item5');
 const inputBox = document.getElementById('input-box');
 const checkButton = document.getElementById('check-button');
 
@@ -37,6 +37,9 @@ const levelButtons = document.querySelectorAll('.level-container .node');
 //Define constants and variables................................................
 let dataRows = [];
 let currentLevel = 1;
+let time = 30
+let currentRow
+let previousRow
 
 
 
@@ -57,19 +60,61 @@ fetchCSVData("grammar.csv")
 
 //Event Listeners...............................................................
 
+
+//Home Button
 homeLink.addEventListener('click', function () {
   window.location.href = '../index.html';
 });
 
+//Start Button
 startButton.addEventListener('click', function () {
+
     console.log('Start button clicked');
-    const currentRow = getRandomRow(dataRows, currentLevel);
+    currentRow = getRandomRow(dataRows, currentLevel);
+    console.log(currentRow)
+    checkButton.disabled = false;
+    verbItem.textContent = currentRow.Verb
+    tenseItem.textContent = currentRow.Tense
+    subjectItem.textContent = currentRow.Subject
+
+
+    startTimer(time)
 });
 
+
+//Check Button
 checkButton.addEventListener('click', function () {
-  console.log('Check button clicked');
+    console.log('Check button clicked');
+    const conjAttempt = inputBox.value.toLowerCase();
+    previousRow = currentRow
+    currentRow = getRandomRow(dataRows, currentLevel);
+    verbItem.textContent = currentRow.Verb
+    tenseItem.textContent = currentRow.Tense
+    subjectItem.textContent = currentRow.Subject
+
+    if (conjAttempt === previousRow.Conjugation) {
+        verdict.textContent = "Correct"
+    } else {
+        verdict.textContent = "Incorrect"
+    }
+    correction.textContent = previousRow.Conjugation
+
+    inputBox.value = '';
+
+
 });
 
+
+//Enter = Check
+inputBox.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        checkButton.click();
+    }
+});
+
+
+//Level select
 levelButtons.forEach(button => {
     button.addEventListener('click', function() {
         // Remove the "active" class from all buttons
