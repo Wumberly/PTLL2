@@ -40,6 +40,8 @@ let currentLevel = 1;
 let time = 30
 let currentRow
 let previousRow
+let count
+let score
 
 
 
@@ -68,11 +70,24 @@ homeLink.addEventListener('click', function () {
 
 //Start Button
 startButton.addEventListener('click', function () {
-
     console.log('Start button clicked');
+    startButton.style.display = 'none';
+
     currentRow = getRandomRow(dataRows, currentLevel);
     console.log(currentRow)
+
+    //reset conditions
     checkButton.disabled = false;
+    correction.textContent = '...';
+    inputBox.textContent = '';
+    scoreItem.textContent = "0";
+    countItem.textContent = "0";
+    percentageItem.textContent = "n/a"
+
+    count = 0
+    score = 0
+
+    //update first conjugation prompt
     verbItem.textContent = currentRow.Verb
     tenseItem.textContent = currentRow.Tense
     subjectItem.textContent = currentRow.Subject
@@ -84,23 +99,29 @@ startButton.addEventListener('click', function () {
 
 //Check Button
 checkButton.addEventListener('click', function () {
-    console.log('Check button clicked');
-    const conjAttempt = inputBox.value.toLowerCase();
+    //collecting answer, storing old row, generating new row
+    const conjAttempt = inputBox.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
     previousRow = currentRow
     currentRow = getRandomRow(dataRows, currentLevel);
+
+    //Filling conjugation promts
     verbItem.textContent = currentRow.Verb
     tenseItem.textContent = currentRow.Tense
     subjectItem.textContent = currentRow.Subject
 
-    if (conjAttempt === previousRow.Conjugation) {
+    //Checking result and updating scores and correction
+    if (conjAttempt === previousRow.Conjugation.normalize("NFD").replace(/[\u0300-\u036f]/g, "")) {
+        scoreItem.textContent = ++score;
         verdict.textContent = "Correct"
     } else {
         verdict.textContent = "Incorrect"
     }
     correction.textContent = previousRow.Conjugation
+    countItem.textContent = ++count;
+    percentageItem.textContent = (score*100/count).toFixed(0) + "%"
 
+    //resetting conditions
     inputBox.value = '';
-
 
 });
 

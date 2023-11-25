@@ -55,8 +55,6 @@ fetch('verbs.json')
 
     // Enable the "check" button initially
     checkButton.disabled = false;
-  
-    // Clear the translation field and correct answer field
     translationInput.value = '';
     correctTranslationText.textContent = '...';
   

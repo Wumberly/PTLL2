@@ -27,14 +27,9 @@ export { fetchCSVData };
 //............................................................................
 
 let timerInterval;
-// Start the game timer
 export function startTimer(time,callback) {
-  // Clear any previous intervals to avoid multiple timers running simultaneously
   clearInterval(timerInterval);
-
-  updateTimeDisplay(time); // Update the timer display initially
-
-  const checkButton = document.getElementById('check-button');
+  updateTimeDisplay(time); 
 
 // Start the timer interval
 timerInterval = setInterval(() => {
@@ -42,12 +37,8 @@ timerInterval = setInterval(() => {
       time--;
       updateTimeDisplay(time);
   } else {
-      // Time is up - handle game over or other actions
       console.log("Timer has ended");
       clearInterval(timerInterval);
-
-      // Disable the "check" button when the timer ends
-      checkButton.disabled = true;
 
       //mainContainer.style.display = 'none'
       
