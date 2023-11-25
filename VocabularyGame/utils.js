@@ -89,7 +89,7 @@ window.startNewGame = function () {
 // Function to redirect to the homepage
 window.redirectToHomepage = function () {
     // Add logic to redirect to the homepage
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
 };
 
 // Function to generate table rows based on word attempt information

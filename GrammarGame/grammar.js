@@ -58,7 +58,7 @@ fetchCSVData("grammar.csv")
 //Event Listeners...............................................................
 
 homeLink.addEventListener('click', function () {
-  window.location.href = '../Homepage/index.html';
+  window.location.href = '../index.html';
 });
 
 startButton.addEventListener('click', function () {
