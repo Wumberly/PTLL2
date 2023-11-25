@@ -230,8 +230,22 @@ body {
 
 }
 
-
-
+/* ----------------------------------------------------------------- */
+/* Popup Container */
+#popup-container {
+    background-color: #183351;
+    border-radius: 10px;
+    display: none;
+    margin:0;
+    border:0;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 90vh;
+    max-height: 760px;
+    width: 1080px;
+}
 
 
 

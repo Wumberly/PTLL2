@@ -13,7 +13,16 @@
 </head>
 <!---------------------------------------------------------------------------------->
 <body>
-    <div class="game-container">
+
+    <!------------------------------->
+    <div id="popup-container">
+        <p>Game Over!</p>
+        <button class="button" id = "retry-button" onclick="startNewGame()">Retry</button>
+            <button class="button" id = "leave-button" onclick="redirectToHomepage()">Leave</button>
+    </div>
+        <!------------------------------->
+
+    <div class="game-container" id = "game-container">
         <div class="navbar-container subcontainer">
             <div class="navbarleft">
                 <p class = "navel" id = "home"> Home</p>
@@ -46,16 +55,16 @@
             </div>
         </div>
         <div class="correction-container subcontainer">
-            <div class="correction-container-splitter item" id = "item8">Incorrect</div>
-            <div class="correction-container-splitter item" id = "item9">Comi</div>
+            <div class="correction-container-splitter item" id = "item8">Result</div>
+            <div class="correction-container-splitter item" id = "item9">...</div>
         </div>
         <div class="scorebox-container subcontainer">
             <div class="correction-container-splitter item" id = "item10">Count</div>
             <div class="correction-container-splitter item" id = "item11">Score</div>
             <div class="correction-container-splitter item" id = "item12">Perc.</div>
-            <div class="correction-container-splitter item" id = "item13">10</div>
-            <div class="correction-container-splitter item" id = "item14">8</div>
-            <div class="correction-container-splitter item" id = "item15">80%</div>
+            <div class="correction-container-splitter item" id = "item13">-</div>
+            <div class="correction-container-splitter item" id = "item14">-</div>
+            <div class="correction-container-splitter item" id = "item15">-</div>
         </div>
         <div class="level-container subcontainer">
             <p id = "leveltitle"> Level Select:</p>

@@ -1,4 +1,4 @@
-function fetchCSVData(csvFilePath) {
+export function fetchCSVData(csvFilePath) {
 
   return fetch(csvFilePath)
     .then(response => response.text())
@@ -22,33 +22,26 @@ function fetchCSVData(csvFilePath) {
     });
 }
 
-// Export the function for use in other files
-export { fetchCSVData };
 //............................................................................
 
-let timerInterval;
-export function startTimer(time,callback) {
-  clearInterval(timerInterval);
-  updateTimeDisplay(time); 
-
-// Start the timer interval
-timerInterval = setInterval(() => {
-  if (time > 0) {
-      time--;
-      updateTimeDisplay(time);
-  } else {
-      console.log("Timer has ended");
-      clearInterval(timerInterval);
-
-      //mainContainer.style.display = 'none'
-      
-      //callback()
-
-  }
-}, 1000); // Update the timer every second (1000 milliseconds)
-}
-
-function updateTimeDisplay(time) {
+export function updateTimeDisplay(time) {
   const timeDisplay = document.getElementById('item2');
   timeDisplay.textContent = `${time}`;
 }
+//............................................................................
+
+export function togglePopup(show) {
+  const popupContainer = document.getElementById('popup-container');
+  popupContainer.style.display = show ? 'grid' : 'none';
+}
+
+//............................................................................
+
+window.startNewGame = function () {
+  const startButton = document.getElementById('start-button');
+  startButton.click();
+};
+
+window.redirectToHomepage = function () {
+  window.location.href = '../index.html';
+};

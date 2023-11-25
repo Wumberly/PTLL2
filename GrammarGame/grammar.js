@@ -1,6 +1,6 @@
 
 //Import functions...........................................................
-import { fetchCSVData, startTimer } from './grammarFunctions.js';
+import { fetchCSVData, updateTimeDisplay, togglePopup } from './grammarFunctions.js';
 import { getRandomRow } from './fibonacci.js';
 
 // Get references to DOM elements............................................
@@ -34,14 +34,21 @@ const percentageItem = document.getElementById('item15');
 // Level container elements
 const levelButtons = document.querySelectorAll('.level-container .node');
 
+// game container elements
+const gameContainer = document.getElementById('game-container');
+
+// popup container elements
+
+
 //Define constants and variables................................................
 let dataRows = [];
 let currentLevel = 1;
-let time = 30
+let startTime = 5
 let currentRow
 let previousRow
 let count
 let score
+let timerInterval
 
 
 
@@ -71,12 +78,14 @@ homeLink.addEventListener('click', function () {
 //Start Button
 startButton.addEventListener('click', function () {
     console.log('Start button clicked');
+    gameContainer.style.display = 'grid'
     startButton.style.display = 'none';
 
     currentRow = getRandomRow(dataRows, currentLevel);
     console.log(currentRow)
 
     //reset conditions
+    togglePopup(false);
     checkButton.disabled = false;
     correction.textContent = '...';
     inputBox.textContent = '';
@@ -93,7 +102,7 @@ startButton.addEventListener('click', function () {
     subjectItem.textContent = currentRow.Subject
 
 
-    startTimer(time)
+    startTimer(startTime)
 });
 
 
@@ -157,6 +166,28 @@ levelButtons.forEach(button => {
         console.log(currentLevel);
     });
 });
+
+
+//Timer Function...............................................................
+function startTimer(time) {
+    clearInterval(timerInterval);
+    updateTimeDisplay(time); 
+  
+  // Start the timer interval
+  timerInterval = setInterval(() => {
+    if (time > 0) {
+        time--;
+        updateTimeDisplay(time);
+    } else {
+        console.log("Timer has ended");
+        clearInterval(timerInterval);
+        gameContainer.style.display = 'none'
+        togglePopup(true);
+
+  
+    }
+  }, 1000);
+  }
 
 
 
