@@ -82,7 +82,7 @@ function generateSummary(count, score, percentage) {
             <tr>
                 <th>Count</th>
                 <th>Correct</th>
-                <th>Perc.</th>
+                <th>Percent</th>
             </tr>
         </thead>
         <tbody>

@@ -46,7 +46,7 @@ const popupContainer = document.getElementById('popup-container');
 let dataRows = [];
 let wordAttempts = [];
 let currentLevel = 1;
-let startTime = 5
+let startTime = 60
 let currentRow
 let previousRow
 let count

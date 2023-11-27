@@ -257,6 +257,8 @@ body {
 .attempts-table th {
     background-color: #C0D1E5;
     color: #426C94;
+    font-size: 24px;
+    padding: 5px 10px 5px 10px;
 }
 
 .attempts-table td {
@@ -282,10 +284,6 @@ body {
     padding: 18px;
 }
 
-tr td:last-child {
-    width: 1%;
-    white-space:nowrap;
-}
 
 
 
