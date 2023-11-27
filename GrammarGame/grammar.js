@@ -1,5 +1,6 @@
 
 //Import functions...........................................................
+
 import { fetchCSVData, updateTimeDisplay, togglePopup } from './grammarFunctions.js';
 import { getRandomRow } from './fibonacci.js';
 
@@ -38,10 +39,12 @@ const levelButtons = document.querySelectorAll('.level-container .node');
 const gameContainer = document.getElementById('game-container');
 
 // popup container elements
-
+const popupContainer = document.getElementById('popup-container');
 
 //Define constants and variables................................................
+
 let dataRows = [];
+let wordAttempts = [];
 let currentLevel = 1;
 let startTime = 5
 let currentRow
@@ -49,8 +52,6 @@ let previousRow
 let count
 let score
 let timerInterval
-
-
 
 //Import data...................................................................
 
@@ -64,11 +65,7 @@ fetchCSVData("grammar.csv")
     }
   });
 
-
-
-
 //Event Listeners...............................................................
-
 
 //Home Button
 homeLink.addEventListener('click', function () {
@@ -105,7 +102,6 @@ startButton.addEventListener('click', function () {
     startTimer(startTime)
 });
 
-
 //Check Button
 checkButton.addEventListener('click', function () {
     //collecting answer, storing old row, generating new row
@@ -120,20 +116,34 @@ checkButton.addEventListener('click', function () {
 
     //Checking result and updating scores and correction
     if (conjAttempt === previousRow.Conjugation.normalize("NFD").replace(/[\u0300-\u036f]/g, "")) {
+        const isCorrect = true
         scoreItem.textContent = ++score;
         verdict.textContent = "Correct"
     } else {
+        const isCorrect = false
         verdict.textContent = "Incorrect"
     }
     correction.textContent = previousRow.Conjugation
     countItem.textContent = ++count;
     percentageItem.textContent = (score*100/count).toFixed(0) + "%"
 
+    // Store the information for the word attempt
+    const wordNumber = count;
+    const wordData = {
+        wordNumber,
+        subject: previousRow.Subject,
+        verb: previousRow.Verb,
+        tense: previousRow.Tense,
+        attempt: conjAttempt,
+        correct: previousRow.Conjugation,
+        result: verdict.textContent === "Correct" ? "Correct" : "Incorrect",
+    };
+    wordAttempts.push(wordData);
+
     //resetting conditions
     inputBox.value = '';
 
 });
-
 
 //Enter = Check
 inputBox.addEventListener('keydown', (event) => {
@@ -142,7 +152,6 @@ inputBox.addEventListener('keydown', (event) => {
         checkButton.click();
     }
 });
-
 
 //Level select
 levelButtons.forEach(button => {
@@ -167,8 +176,8 @@ levelButtons.forEach(button => {
     });
 });
 
-
 //Timer Function...............................................................
+
 function startTimer(time) {
     clearInterval(timerInterval);
     updateTimeDisplay(time); 
@@ -181,10 +190,9 @@ function startTimer(time) {
     } else {
         console.log("Timer has ended");
         clearInterval(timerInterval);
-        gameContainer.style.display = 'none'
-        togglePopup(true);
-
-  
+        gameContainer.style.display = 'none';
+        console.log(count, score);
+        togglePopup(true, score, count, wordAttempts); 
     }
   }, 1000);
   }
