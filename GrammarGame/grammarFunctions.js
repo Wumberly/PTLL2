@@ -112,7 +112,6 @@ export function togglePopup(show, score, count, wordAttempts) {
     attemptContainer.innerHTML = `${tableRows}`;
     summaryContainer.innerHTML = `${tableSummary}`;
     popupButtons.innerHTML = `
-        <p>Game Over!</p>
         <button class="button" id="retry-button" onclick="startNewGame()">Retry</button>
         <button class="button" id="leave-button" onclick="redirectToHomepage()">Leave</button>
     `;

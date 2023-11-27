@@ -82,6 +82,7 @@ startButton.addEventListener('click', function () {
     console.log(currentRow)
 
     //reset conditions
+    wordAttempts.length = 0;
     togglePopup(false);
     checkButton.disabled = false;
     correction.textContent = '...';
