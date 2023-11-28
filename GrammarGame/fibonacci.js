@@ -1,4 +1,4 @@
-function getRandomRow(dataRows, targetLevel) {
+function getRandomRow(dataRows, targetLevel, indexArray) {
     // Function to generate Fibonacci sequence up to a given term
     function generateFibonacci(n) {
         const sequence = [1, 1];
@@ -44,14 +44,18 @@ function getRandomRow(dataRows, targetLevel) {
     // If selectedIndex is still undefined, set it to targetLevel
     selectedLevel = selectedIndex !== undefined ? selectedIndex : targetLevel;
 
-    // Filter rows based on the selected level and targetLevel
-    let validRows = dataRows.filter(row => parseInt(row.Level) <= targetLevel && parseInt(row.Level) == selectedLevel);
+    let validRows = dataRows.filter(row =>
+        parseInt(row.Level) <= targetLevel &&
+        parseInt(row.Level) === selectedLevel &&
+        !indexArray.includes(row.Index)
+    );
 
 
     // If there are no rows for the selected level, recursively call the function with the next level
     if (validRows.length === 0) {
         console.log("No valid rows for the selected level. Trying the next level.");
-        return getRandomRow(dataRows, targetLevel);
+        targetLevel++; 
+        return getRandomRow(dataRows, targetLevel, indexArray);
     }
 
     // Get a random index within the valid rows

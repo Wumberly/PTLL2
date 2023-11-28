@@ -45,8 +45,9 @@ const popupContainer = document.getElementById('popup-container');
 
 let dataRows = [];
 let wordAttempts = [];
+let indexArray = []
 let currentLevel = 1;
-let startTime = 60
+let startTime = 10
 let currentRow
 let previousRow
 let count
@@ -78,10 +79,11 @@ startButton.addEventListener('click', function () {
     gameContainer.style.display = 'grid'
     startButton.style.display = 'none';
 
-    currentRow = getRandomRow(dataRows, currentLevel);
+    currentRow = getRandomRow(dataRows, currentLevel, indexArray);
     console.log(currentRow)
 
     //reset conditions
+    indexArray.length = 0;
     wordAttempts.length = 0;
     togglePopup(false);
     checkButton.disabled = false;
@@ -108,7 +110,9 @@ checkButton.addEventListener('click', function () {
     //collecting answer, storing old row, generating new row
     const conjAttempt = inputBox.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
     previousRow = currentRow
-    currentRow = getRandomRow(dataRows, currentLevel);
+    indexArray.push(previousRow.Index);
+    currentRow = getRandomRow(dataRows, currentLevel, indexArray);
+
 
     //Filling conjugation promts
     verbItem.textContent = currentRow.Verb

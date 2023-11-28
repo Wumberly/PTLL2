@@ -16,10 +16,7 @@ body {
     display: grid;
     margin:0;
     border:0;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 20px 20px 20px;
     height: 90vh;
     max-height: 760px;
     width: 1080px;
@@ -227,12 +224,15 @@ body {
     font-weight: bold;
     font-size: larger;
     justify-self: baseline;
+}
 
+#input-box {
+    font-size: 24px;
 }
 
 /* ----------------------------------------------------------------- */
 /* Popup Container */
-#popup-container {
+.popup-container {
     background-color: #183351;
     border-radius: 10px;
     display: none;
@@ -249,14 +249,19 @@ body {
     color: #ffffff;
 }
 
-#attempts-table {
+.attempts-table {
     justify-content: center;
     width: auto;
+    height: 60vh;
+    max-height: 450px;
+    overflow-y: auto; 
 }
 
 .attempts-table th {
     background-color: #C0D1E5;
     color: #426C94;
+    position: sticky;
+    top: 0;
     font-size: 24px;
     padding: 5px 10px 5px 10px;
 }
@@ -264,6 +269,22 @@ body {
 .attempts-table td {
     background-color: #426C94;
     padding: 6px 18px 6px 18px;
+}
+
+.attempts-table tr.incorrect-row {
+    color: red;
+}
+
+.attempts-table::-webkit-scrollbar {
+    width: 20px;
+}
+
+.attempts-table::-webkit-scrollbar-thumb {
+    background-color: #C0D1E5;
+}
+
+.attempts-table::-webkit-scrollbar-track {
+    background-color: #426C94;
 }
 
 #summary-table {
@@ -307,7 +328,18 @@ body {
     /*box with timer */
     #item2 {
     font-size: 4em;
-}
+    }
+
+    .popup-container {
+        padding: 0% 0% 0% 0%;
+        height: 98vh;
+        width: 98vw;
+    }
+
+    .attempts-table {
+        height: 95vh;
+        width: 95vw;
+    }
 }
 
 /* ----------------------------------------------------------------- */
@@ -352,7 +384,7 @@ body {
 }
   
 /* ----------------------------------------------------------------- */
-/* Media Query for 600px width and lower */
+/* Media Query for 515px width and lower */
 @media (max-width: 515px) {
     .button {  
         min-width: 100px;

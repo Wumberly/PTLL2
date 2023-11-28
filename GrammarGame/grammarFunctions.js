@@ -58,15 +58,15 @@ function generateTableRows(wordAttempts) {
           </thead>
           <tbody>
               ${wordAttempts.map((wordData, index) => `
-                  <tr>
-                      <td>${wordData.wordNumber}</td>
-                      <td>${wordData.subject}</td>
-                      <td>${wordData.verb}</td>
-                      <td>${wordData.tense}</td>
-                      <td>${wordData.attempt}</td>
-                      <td>${wordData.correct}</td>
-                      <td>${wordData.result}</td>
-                  </tr>
+                <tr class="${wordData.result === 'Incorrect' ? 'incorrect-row' : ''}">
+                  <td>${wordData.wordNumber}</td>
+                  <td>${wordData.subject}</td>
+                  <td>${wordData.verb}</td>
+                  <td>${wordData.tense}</td>
+                  <td>${wordData.attempt}</td>
+                  <td>${wordData.correct}</td>
+                  <td>${wordData.result}</td>
+                </tr>
               `).join('')}
           </tbody>
       </table>
