@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="temp.css">
+    <title>RoteLearn - Homepage</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+</head>
+<!---------------------------------------------------------------------------------->
+<body>
+    <div class="game-container" id = "game-container">
+        <div class="navbar-container subcontainer">
+            <div class="navbarleft">
+                <p class = "navel" id = "home"> Home</p>
+            </div>
+            <div class="navbarright">
+            </div>
+        </div>
+        <div class="title-container subcontainer">
+            <h1 id="RoteLearn">Rote<strong>Learn</strong></h1>
+            <h2 id = "subtitle"> Homepage</h2>
+        </div>
+
+        <div class="introduction-container item" id = item1>
+                <h2>Introduction</h2>
+                <p class = "paragraph" id = "intro-text"> 
+                    The purpose of this application is to provide a platform where a user can 
+                    practice conjugating verbs and translating words as fast as possible. 
+                    The application delivers the content in order of frequency of use and ease of learning.
+                    Each sebsequent level in a game presents content that is more difficult or less common.
+                    By progressing through the levels, the intention is that a user will gradually deepen their 
+                    knowledge of vocabulary and grammar.
+                    The app is functional and dificult and is designed for people who are trying to learn the content
+                    as fast as possible.   
+                </p>
+                <div class="chart-container item" id="item4">
+                    <h2>Performance Chart</h2>
+                    <div class="chart" id="performance-chart"></div>
+                </div>
+        </div>
+        <div class="vocabulary-game-container item" id = item2>
+            <h2>Vocabulary</h2>
+            <p class = "paragraph" id = "vocab-text"> 
+                30 seconds,
+                translate words,
+                review,
+                retry,
+                level up
+            </p>
+            <button href="VocabularyGame/game.html" class="button">Play</button>
+        </div>
+        <div class="grammar-game-container item" id = item3>
+            <h2>Grammar</h2>
+            <p class = "paragraph" id = "grammar-text"> 
+                60 seconds,
+                conjugate verbs,
+                review,
+                retry,
+                level up 
+            </p>
+            <button href="GrammarGame/grammar.html" class="button">Play</button>
+        </div>
+        
+    </div>
+
+</body>
+</html>

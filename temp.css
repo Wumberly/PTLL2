@@ -1,0 +1,212 @@
+/* ----------------------------------------------------------------- */
+
+/* This is the full screen*/
+body {
+    background-color: #7499AF;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* This is the full game container */
+.game-container {
+    background-color: #183351;
+    color: #ffffff;
+    border-radius: 10px;
+    display: grid;
+    margin:0;
+    border:0;
+    padding: 20px 20px 20px 20px;
+    height: 90vh;
+    max-height: 760px;
+    width: 1080px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: .23fr .67fr 1.6fr 1.5fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    
+}
+/* ----------------------------------------------------------------- */
+/* These are the 5 main containers inside the game container */
+.subcontainer {
+    background-color: #426C94;
+}
+
+.navbar-container {
+    background-color: #C0D1E5;
+    grid-column: span 2;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.title-container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.introduction-container {
+    background-color: #426C94;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-column: span 2;
+}
+
+.vocabulary-game-container {
+    background-color: #426C94;
+    display: grid;
+    place-items: center;
+}
+
+.grammar-game-container {
+    background-color: #426C94;
+    display: grid;
+    place-items: center;
+}
+
+
+
+/* ----------------------------------------------------------------- */
+/* These are smaller containers that contain the elements */
+
+.navbarleft {
+    display: flex;
+    gap: 15px;
+    padding-left: 2%;
+}
+
+.navbarright {
+    display: flex;
+    gap: 15px;
+    padding-right: 2%;
+}
+
+/* ----------------------------------------------------------------- */
+/* These are the elements */
+.button {  
+    display: inline-block;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 14px 18px;
+    color: #ffffff;
+    box-shadow: inset 0 0 0 2px #ffffff;
+    background-color: transparent;
+    height: 48px;
+    :hover{
+        color: #fff;
+        background-color: #ffffff;
+    }
+}
+
+.navel {
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    cursor: pointer;
+}
+
+#RoteLearn {
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    font-size: 5em;
+    padding-left: 2%;
+}
+
+#subtitle {
+    font-weight: normal;
+    align-self: flex-end;
+    padding: 0;
+    margin: 0;
+    font-size: 3em;
+    padding-bottom: 2px;
+    padding-right: 2%;
+}
+
+.chart-container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart {
+    width: 100%;
+    height: 300px; /* Adjust height as needed */
+}
+
+/* ----------------------------------------------------------------- */
+/* Media Query for 780px width and lower */
+@media (max-width: 780px) {
+    #RoteLearn {
+        font-size: 3em;
+    }
+    
+    #subtitle {
+        font-size: 2em;
+    }
+
+    .title-container {
+        grid-column: span 6;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* ----------------------------------------------------------------- */
+/* Media Query for 600px width and lower */
+
+@media (max-width: 600px) {
+    #RoteLearn {
+        font-size: 3em;
+    }
+    
+    #subtitle {
+        font-size: 2em;
+    }
+
+    .game-container {
+        padding: 5px;
+        height: 94vh;
+        min-height: 460px;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr 1fr 1fr 3fr 1.5fr;
+        gap: 2px;
+    }
+
+    .subcontainer {
+        grid-column: span 1;
+    }
+
+}
+  
+/* ----------------------------------------------------------------- */
+/* Media Query for 515px width and lower */
+@media (max-width: 515px) {
+    .button {  
+        min-width: 100px;
+}
+}
+
+/* ----------------------------------------------------------------- */
+/* Media Query for 280px width and lower -- END DISPLAY */
+@media (max-width: 280px) {
+    .game-container {
+        display: none;
+    }
+}

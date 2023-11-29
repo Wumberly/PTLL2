@@ -252,7 +252,6 @@ body {
 .attempts-table {
     justify-content: center;
     width: auto;
-    height: 60vh;
     max-height: 450px;
     overflow-y: auto; 
 }

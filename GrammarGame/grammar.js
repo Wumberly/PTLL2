@@ -47,7 +47,7 @@ let dataRows = [];
 let wordAttempts = [];
 let indexArray = []
 let currentLevel = 1;
-let startTime = 10
+let startTime = 60
 let currentRow
 let previousRow
 let count
