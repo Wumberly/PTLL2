@@ -252,6 +252,7 @@ body {
 .attempts-table {
     justify-content: center;
     width: auto;
+    height: 60vh;
     max-height: 450px;
     overflow-y: auto; 
 }
@@ -391,9 +392,63 @@ body {
 }
 
 /* ----------------------------------------------------------------- */
+/* Media Query for 450px width and lower */
+@media (max-width: 450px) {
+    .popup-container {
+        padding: 20px 20px 20px 20px;
+        height: 100vh;
+        max-height: 760px;
+        width: 100vh;
+        padding: 0;
+        grid-template-rows: 3fr 1fr 1fr;
+    }
+    .attempts-table {
+        width: 95%;
+        max-width: 450px;
+        height: 80%;
+
+    }
+
+    #summary-table {
+        border: 1px solid #183351;
+        font-size: 24px;
+        margin: 5px;
+    }
+}
+
+/* ----------------------------------------------------------------- */
+/* Media Query for 700px height and lower */
+
+@media (max-height: 800px) {
+    
+    .popup-container {
+        grid-template-rows: 2fr 1fr 1fr;
+    }
+
+    #summary-table {
+        font-size: 24px;
+        margin: 5px;
+    }
+    .summary-table td {
+        padding: 12px;
+      }
+    
+    .summary-table th {
+        padding: 12px;
+    }
+    .attempts-table {
+        height: 40vh;
+    }
+}
+
+
+
+/* ----------------------------------------------------------------- */
 /* Media Query for 280px width and lower -- END DISPLAY */
 @media (max-width: 280px) {
     .game-container {
         display: none;
     }
 }
+
+
