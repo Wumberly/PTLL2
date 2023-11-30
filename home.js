@@ -1,3 +1,7 @@
+const vocabButton = document.getElementById('vocab-button');
+const grammarButton = document.getElementById('grammar-button');
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // Sample data for the chart
     const chartData = {
@@ -41,3 +45,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+//Vocab Button
+vocabButton.addEventListener('click', function () {
+    window.location.href = 'VocabularyGame/game.html';
+  });
+
+  //Grammar Button
+grammarButton.addEventListener('click', function () {
+    window.location.href = 'GrammarGame/grammar.html';
+  });
