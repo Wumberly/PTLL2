@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Vocab Button
 vocabButton.addEventListener('click', function () {
-    window.location.href = 'VocabularyGame/game.html';
+    window.location.href = 'VocabularyGame/vocabulary.html';
   });
 
   //Grammar Button
