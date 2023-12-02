@@ -19,7 +19,7 @@ body {
     border:0;
     padding: 20px 20px 20px 20px;
     height: 90vh;
-    max-height: 760px;
+    max-height: 850px;
     width: 1080px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: .23fr .67fr 1.6fr 1.5fr;
@@ -53,9 +53,10 @@ body {
 }
 
 .chart-container {
-    background-color: #426C94;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
 }
-
 
 .vocabulary-game-container {
     background-color: #426C94;
@@ -114,6 +115,8 @@ body {
     }
 }
 
+/* --------------------------------------------------- */
+/* These are all relating to the chart box */
 #item4 {
     background-color: #C0D1E5;
     border-radius: 0%;
@@ -130,6 +133,13 @@ body {
     background-color: #ffffff;
     border-radius: 10px;
 }
+
+.chart {
+    width: 100%;
+    height: 100%;
+}
+
+/* --------------------------------------------------- */
 
 .navel {
     margin: 0;
@@ -156,41 +166,11 @@ body {
     padding-right: 2%;
 }
 
-.chart-container {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
-.chart {
-    width: 100%;
-    height: 100%; /* Adjust height as needed */
-}
 
 /* ----------------------------------------------------------------- */
 /* Media Query for 780px width and lower */
-@media (max-width: 780px) {
-    #RoteLearn {
-        font-size: 3em;
-    }
-    
-    #subtitle {
-        font-size: 2em;
-    }
-
-    .title-container {
-        grid-column: span 6;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-/* ----------------------------------------------------------------- */
-/* Media Query for 600px width and lower */
-
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #RoteLearn {
         font-size: 3em;
     }
@@ -201,11 +181,38 @@ body {
 
     .game-container {
         padding: 5px;
-        height: 94vh;
+        height: 100%;
         min-height: 460px;
+        max-height: 1400px;
         grid-template-columns: 1fr;
-        grid-template-rows: .5fr 1fr 1fr 3fr 1.5fr;
-        gap: 2px;
+        grid-template-rows: .2fr .4fr 1fr 1fr .8fr .8fr;
+        gap: 5px;
+    }
+
+    .navbar-container {
+        grid-column: span 1;
+    }
+    
+    .title-container {
+        grid-column: span 1;
+    }
+
+}
+
+/* ----------------------------------------------------------------- */
+/* Media Query for 600px width and lower */
+
+@media (max-width: 600px) {
+    .game-container {
+        grid-template-rows: .1fr .4fr 1fr 1fr .8fr .8fr;
+    }
+
+    #RoteLearn {
+        font-size: 3em;
+    }
+    
+    #subtitle {
+        font-size: 2em;
     }
 
     .subcontainer {
@@ -216,13 +223,38 @@ body {
   
 /* ----------------------------------------------------------------- */
 /* Media Query for 515px width and lower */
-@media (max-width: 515px) {
+@media (max-width: 400px) {
     .button {  
         min-width: 100px;
-}
+    }
+    #subtitle {
+        font-size: 1.5em;
+    }
+    #RoteLearn {
+        font-size: 2em;
+    }
+
 }
 
 /* ----------------------------------------------------------------- */
+/* ----------------------------------------------------------------- */
+/* Media Query for 350px width and lower */
+@media (max-width: 350px) {
+    .game-container {
+        grid-template-rows: .1fr .4fr 1.2fr 1fr .8fr .8fr;
+    }
+    #subtitle {
+        font-size: 1.5em;
+    }
+    #RoteLearn {
+        font-size: 2em;
+    }
+
+}
+
+/* -------------------------------------------
+
+
 /* Media Query for 280px width and lower -- END DISPLAY */
 @media (max-width: 280px) {
     .game-container {
