@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tempStyle.css">
+    <title>RoteLearn - Vocabulary Trainer</title>
+
+    <script type="module" src="tempVoc.js"></script>
+    <script type="module" src="vocabularyFunctions.js"></script>
+
+</head>
+<!---------------------------------------------------------------------------------->
+<body>
+
+    <!------------------------------->
+    <div class = "popup-container" id="popup-container">
+        <div class = "attempts-table popupel" id="attempts-table"></div>
+        <div class = "summary-table popupel" id="summary-table"></div>
+        <div class = "popupel" id="popup-buttons"></div> 
+    </div>
+        <!------------------------------->
+
+    <div class="game-container" id = "game-container">
+        <div class="navbar-container subcontainer">
+            <div class="navbarleft">
+                <p class = "navel" id = "home"> Home</p>
+            </div>
+            <div class="navbarright">
+            </div>
+        </div>
+        <div class="title-container subcontainer">
+            <h1 id="RoteLearn">Rote<strong>Learn</strong></h1>
+            <h2 id = "VocabularyTrainer"> Vocabulary Trainer</h2>
+        </div>
+        <div class="time-container subcontainer">
+            <div class="time-container-splitter item" id = "item1">
+                <button id = "start-button" class="button">Start</button>
+            </div>
+            <div class="time-container-splitter item" id = "item2"></div>
+        </div>
+        <div class="gameplay-container subcontainer">
+            <div class="gameplay-container-splitter item" id = "item3"></div>
+            <div class="gameplay-container-splitter item" id = "item6">
+                <input id = "input-box" type="text" placeholder="Enter Translation" autocomplete="off">
+            </div>
+            <div class="gameplay-container-splitter item" id = "item7">
+                <button id = "check-button" class="button" disabled>Check</button>
+            </div>
+        </div>
+        <div class="correction-container subcontainer">
+            <div class="correction-container-splitter item" id = "item8">Result</div>
+            <div class="correction-container-splitter item" id = "item9">...</div>
+        </div>
+        <div class="scorebox-container subcontainer">
+            <div class="correction-container-splitter item" id = "item10">Count</div>
+            <div class="correction-container-splitter item" id = "item11">Score</div>
+            <div class="correction-container-splitter item" id = "item12">Perc.</div>
+            <div class="correction-container-splitter item" id = "item13">-</div>
+            <div class="correction-container-splitter item" id = "item14">-</div>
+            <div class="correction-container-splitter item" id = "item15">-</div>
+        </div>
+        <div class="level-container subcontainer">
+            <p id = "leveltitle"> Level Select:</p>
+            <button class="node active">1</button>
+            <button class="node">2</button>
+            <button class="node">3</button>
+            <button class="node">4</button>
+            <button class="node">5</button>
+        </div>
+    </div>
+
+</body>
+</html>
